@@ -1,0 +1,91 @@
+.hamburger-btn {
+    position: fixed;
+    display: block;
+    z-index: 10;
+    width: 50px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: rgb(80, 178, 179);
+    right: 30px;
+    top: 30px;
+}
+.hamburger-btn:hover {cursor: pointer;}
+
+.hamburger-btn .icon {
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin: 5px 10px;
+}
+
+.menu-main {
+    width: 25vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 11;
+    display: block;
+    background-color: rgb(80, 178, 179);
+    top: 0;
+    right: 0;
+    color: white;
+}
+.menu-main .close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 30px;
+    height: 30px;
+}
+.menu-main .close:hover {cursor: pointer;}
+
+.menu-main .menu-items {
+    width: calc(100% - 40px);
+    height: fit-content;
+    position: relative;
+    top: 70px;
+    left: 40px;
+    max-height: calc(100% - 170px);
+    overflow-y: auto;
+}
+.menu-main .menu-items .menu-item {
+    display: block;
+    font-size: 5vh;
+    text-decoration: none;
+    color: inherit;
+    margin-bottom: 30px;
+}
+.menu-main .menu-items .menu-item:hover {
+    cursor: pointer;
+}
+
+.menu-main .menu-items .menu-item .menu-item {
+    margin: unset;
+    margin-left: 30px;
+    margin-top: 10px;
+    font-size: 4vh;
+}
+
+.menu-main .menu-items .expand {
+    font-size: medium;
+    transition-duration: .5s;
+}
+.menu-main .menu-items .expand-rotated,
+.menu-main .menu-items .menu-item:hover .expand {
+    transform: rotate(90deg);
+}
+
+.menu-main .media-menu {
+    display: block;
+    position: absolute;
+    bottom: 15px;
+    left: 40px;
+}
+
+.menu-main .media-menu .menu-item {
+    width: calc((25vw - 80px) / 9);
+    height: calc((25vw - 80px) / 9);
+    margin-right: calc((25vw - 80px) / 9);
+    display: inline-block;
+    color: white;
+    margin-bottom: 15px;
+}

@@ -1,0 +1,39 @@
+.home {
+    background-image: url('/src/blob/compressed_HomePageBackground.webp');
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.home .logo {
+    position: absolute;
+    display: block;
+    width: 25vw;
+    height: 20vw;
+    top: 30vh;
+    left: 5vw;
+}
+
+.home .slogan {
+    position: absolute;
+    display: block;
+    top: calc(30vh + 5vw);
+    left: 35vw;
+}
+
+.home .slogan span {display: block;}
+.home .slogan .title {
+    font-size: 5vw;
+    color: white;
+    text-shadow: 2px 2px 4px lightgray;
+}
+.home .slogan .sub {
+    margin-left: 10px;
+}
