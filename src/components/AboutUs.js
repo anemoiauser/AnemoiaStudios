@@ -26,16 +26,12 @@ function AboutUs() {
                 <img className='affiliation' src={NewMediaFilmFestival} alt='New Media Film Festival' />
             </div>
             <div className='about-block people'>
-                <img className='photo' src={CEOPhoto} alt='CEO Photo' />
+                <img className='photo' src={CEOPhoto} alt='CEO' />
                 <span className='name'>Bejá A.Christmas</span>
                 <span>Founder & CEO</span>
                 <span style={{marginTop: '20px'}}>
                 Bejá has over twelve years of experience in the entertainment industry and has worked in different roles and capacities. Being a black woman in America, she has experienced adversity and has also discovered that minority/ethnic groups lack representation in the film and television industry. Using her experience, passion, and history, she is building Anemoia Inc. as a dream to represent the true culture of Black Americans and other POC in America.
                 </span>
-                {/* <span className='tagline'>Bejá A.Christmas</span>
-                <span className='summary'>
-                Bejá has over twelve years of experience in the entertainment industry and has worked in different roles and capacities. Being a black woman in America, she has experienced adversity and has also discovered that minority/ethnic groups lack representation in the film and television industry. Using her experience, passion, and history, she is building Anemoia Inc. as a dream to represent the true culture of Black Americans and other POC in America.
-                </span> */}
             </div>
             <div className='about-block people'>
                 <img className='photo' src={Wanting} alt='Wanting Position' />
