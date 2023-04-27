@@ -4,6 +4,7 @@ import Home from "./Home";
 import Error from "./Error";
 import Menu from "./Menu";
 import AboutUs from "./AboutUs";
+import Tour from "./Tour";
 
 function App() {
     return (
@@ -12,6 +13,10 @@ function App() {
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<AboutUs />} />
+                <Route path="/tour">
+                    <Route path="studio" element={<Tour scence='studio' />} />
+                    <Route path="anewood" element={<Tour scence='anewood' />} />
+                </Route>
                 <Route path="*" element={<Error />} />
             </Routes>
         </BrowserRouter>

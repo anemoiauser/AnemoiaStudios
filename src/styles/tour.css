@@ -1,0 +1,33 @@
+.container {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    overflow-y: hidden;
+    overflow-x: auto;
+}
+.container::-webkit-scrollbar {display: none;}
+
+.container .scence {
+    display: block;
+    position: absolute;
+    /* height: 100%; */
+    width: calc(100vw * 9);
+    top: 0;
+}
+
+.container .scence:hover {cursor: grab;}
+.container .scence:active {cursor: grabbing;}
+
+.container .logo {
+    width: 20vh;
+    height: 15vh;
+    position: fixed;
+    top: 30px;
+    left: 30px;
+    z-index: 10;
+}
+
+.container .logo:hover {cursor: pointer;}
