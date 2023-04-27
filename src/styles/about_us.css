@@ -1,0 +1,87 @@
+body {
+    background-color: rgb(128, 215, 207);
+}
+
+.about-main {
+    display: block;
+    white-space: nowrap;
+    height: 80vh;
+    width: 80vw;
+    overflow-y: auto;
+    position: absolute;
+    top: 10vh;
+    left: 10vw;
+}
+.about-main::-webkit-scrollbar {height: 8px;}
+.about-main::-webkit-scrollbar-track {background: rgba(0, 0, 0, 0);}
+.about-main::-webkit-scrollbar-thumb {background: rgb(180, 180, 180); border-radius: 5px;}
+.about-main::-webkit-scrollbar-thumb:hover {background: rgb(150, 150, 150);}
+
+.about-main .about-block {
+    width: fit-content;
+    min-width: 20vw;
+    max-width: 30vw;
+    height: calc(99% - 60px);
+    overflow: hidden;
+    display: inline-block;
+    padding: 30px;
+    border-left: 1px solid black;
+    transition-duration: .3s;
+    position: relative;
+    overflow-y: auto;
+    word-wrap: normal;
+    white-space: normal;
+}
+.about-main .about-block::-webkit-scrollbar {width: 10px;}
+.about-main .about-block::-webkit-scrollbar-track {background: rgba(0, 0, 0, 0);}
+.about-main .about-block::-webkit-scrollbar-thumb {background: rgb(128, 215, 207); border-radius: 5px;}
+.about-main .about-block::-webkit-scrollbar-thumb:hover {background: rgb(69, 154, 155);}
+.about-main .about-block:hover {
+    background-color: rgb(80, 178, 179);
+}
+.about-main .about-block:last-child {
+    border-right: 1px solid black;
+}
+
+.about-main .about-company .main-img {
+    width: 15vh;
+    height: 10vh;
+    position: absolute;
+}
+
+.about-main .about-company .tagline {
+    margin-left: 20vh;
+    display: block;
+    font-size: large;
+    font-weight: bold;
+}
+
+.about-main .about-company .summary {
+    display: block;
+    margin-top: 20px;
+}
+
+.about-main .about-company .affiliation {
+    height: 15vh;
+    display: inline-block;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+.about-main .people {
+    max-width: unset;
+    text-align: center;
+}
+
+.about-main .people .photo {
+    width: 10vw;
+}
+
+.about-main .people span {
+    display: block;
+    max-width: 25vw;
+}
+.about-main .people .name {
+    font-size: large;
+    font-weight: bold;
+}
