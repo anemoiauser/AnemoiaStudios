@@ -1,6 +1,6 @@
 import { React, useState } from 'react'
 import '../styles/menu.css'
-import { CaretRightFill, Instagram, Linkedin, List, Tiktok, Twitter, XLg, Youtube } from 'react-bootstrap-icons'
+import { CaretRightFill, Instagram, Linkedin, List, Twitter, XLg, Youtube } from 'react-bootstrap-icons'
 import { Link } from 'react-router-dom'
 
 function Menu() {
