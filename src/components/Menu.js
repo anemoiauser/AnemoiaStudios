@@ -15,6 +15,7 @@ function Menu() {
         <div className='menu-main'>
             <XLg className='close' onClick={()=>setMenuStatus(false)} />
             <div className='menu-items'>
+                <Link to='/' className='menu-item' onClick={()=>setMenuStatus(false)}>Home</Link>
                 <div className='menu-item' onClick={()=>setExpandStatus({...expandStatus, tour: !expandStatus.tour})}
                 >Tours <CaretRightFill className={`expand${expandStatus.tour ? ' expand-rotated' : ''}`} />
                 {
