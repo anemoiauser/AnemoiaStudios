@@ -38,7 +38,6 @@ function Menu() {
                 <a rel="noreferrer" href='https://instagram.com/anemoiastudios' target='_blank'><Instagram className='menu-item' /></a>
                 <a rel="noreferrer" href='https://twitter.com/anemoiainc' target='_blank'><Twitter className='menu-item' /></a>
                 <a rel="noreferrer" href='https://www.linkedin.com/company/anemoia-studios-inc' target='_blank'><Linkedin className='menu-item' /></a>
-                <a rel="noreferrer" href='https://www.youtube.com' target='_blank'><Tiktok className='menu-item' /></a>
             </div>
         </div> :
         <div className='hamburger-btn' onClick={()=>{setMenuStatus(true)}}>

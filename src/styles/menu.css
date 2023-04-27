@@ -82,9 +82,9 @@
 }
 
 .menu-main .media-menu .menu-item {
-    width: calc(20.7vw / 9);
-    height: calc(20.7vw / 9);
-    margin-right: calc(20.7vw / 9);
+    width: 3vw;
+    height: 3vw;
+    margin: 0 1vw;
     display: inline-block;
     color: white;
     margin-bottom: 15px;
