@@ -1,8 +1,14 @@
-import { React } from 'react'
+import { React, useEffect } from 'react'
 import '../styles/home.css'
 import AnemoiaLogo from '../blob/anemoia_logo.png'
 
 function Home() {
+    
+    useEffect(()=>{
+        document.title = 'Anemoia Studios New Web';
+    // eslint-disable-next-line
+    }, [])
+
     return (
         <div className='home'>
             <img className='logo' alt='Anemoia studios logo' src={AnemoiaLogo} />

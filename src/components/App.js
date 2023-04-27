@@ -1,4 +1,4 @@
-import { React, useEffect } from "react";
+import { React } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./Home";
 import Error from "./Error";
@@ -6,10 +6,6 @@ import Menu from "./Menu";
 import AboutUs from "./AboutUs";
 
 function App() {
-    useEffect(()=>{
-        document.title = 'Anemoia Studios New Web';
-    // eslint-disable-next-line
-    }, [])
     return (
         <BrowserRouter>
             <Menu />

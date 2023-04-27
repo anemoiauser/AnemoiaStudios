@@ -1,4 +1,4 @@
-import { React, useRef } from 'react'
+import { React, useRef, useEffect } from 'react'
 import '../styles/about_us.css'
 import AnewoodLogo from '../blob/anewood_logo.png'
 import FemaleFounderLogo from '../blob/FemaleFounderLogo.png'
@@ -8,6 +8,11 @@ import Wanting from '../blob/wanting.png'
 
 function AboutUs() {
     const about_main_ref = useRef()
+    
+    useEffect(()=>{
+        document.title = 'Anemoia Studios New Web | About Us';
+    // eslint-disable-next-line
+    }, [])
 
     function scrollToHorizontal(event) {
         const amount = event.deltaY
