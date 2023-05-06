@@ -10,7 +10,7 @@
 }
 .container::-webkit-scrollbar {display: none;}
 
-.container .scence {
+.container .scene {
     display: block;
     position: absolute;
     /* height: 100%; */
@@ -18,8 +18,8 @@
     top: 0;
 }
 
-.container .scence:hover {cursor: grab;}
-.container .scence:active {cursor: grabbing;}
+.container .scene:hover {cursor: grab;}
+.container .scene:active {cursor: grabbing;}
 
 .container .logo {
     width: 20vh;

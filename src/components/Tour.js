@@ -7,13 +7,13 @@ import '../styles/tour.css'
 import { Link } from 'react-router-dom'
 import TourProgressBar from './TourProgressBar'
 
-function Tour({scence}) {
+function Tour({scene}) {
     const containerRef = useRef()
-    const scenceRef = useRef()
+    const sceneRef = useRef()
     const slideTimeOut = useRef()
     const slideInterval = useRef()
 
-    const scences = useRef({
+    const scenes = useRef({
         anewood: Anewood,
         studio: Studio
     })
@@ -31,7 +31,7 @@ function Tour({scence}) {
 
     useEffect(()=>{
         if(scrollWidth) {
-            setScrollLeft((scenceRef.current.offsetWidth - scrollWidth) / 2)
+            setScrollLeft((sceneRef.current.offsetWidth - scrollWidth) / 2)
         }
     }, [scrollWidth])
 
@@ -84,8 +84,8 @@ function Tour({scence}) {
     return (
         <div className='container' ref={containerRef} onWheel={scrollImage}>
             <TourProgressBar progress={progress} manualSetProgress={manualSetProgress} />
-            <Link to='/'><img className='logo'  src={logos.current[scence]} alt='logo' /></Link>
-            <img className='scence' ref={scenceRef} src={scences.current[scence]} alt="scence" 
+            <Link to='/'><img className='logo'  src={logos.current[scene]} alt='logo' /></Link>
+            <img className='scene' ref={sceneRef} src={scenes.current[scene]} alt="scene" 
                 onLoad={()=>{setScrollWidth(containerRef.current.offsetWidth)}}
                 onMouseDown={()=>setMouseDown(true)} onMouseUp={()=>setMouseDown(false)} onMouseMove={onMouseMove}
                 onMouseLeave={()=>setMouseDown(false)} draggable={false} />
