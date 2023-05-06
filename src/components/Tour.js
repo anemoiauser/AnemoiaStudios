@@ -1,10 +1,11 @@
-import { React, useRef, useState } from 'react'
+import { React, useEffect, useRef, useState } from 'react'
 import Anewood from '../blob/anewood.jpg'
 import Studio from '../blob/studio.jpg'
 import AnewoodLogo from '../blob/anewood_logo.png'
 import AnemoiaLogo from '../blob/anemoia_logo.png'
 import '../styles/tour.css'
 import { Link } from 'react-router-dom'
+import TourProgressBar from './TourProgressBar'
 
 function Tour({scence}) {
     const containerRef = useRef()
@@ -23,16 +24,44 @@ function Tour({scence}) {
     const [mouseDown, setMouseDown] = useState(false)
     const [mouseX, setMouseX] = useState()
 
+    const [scrollWidth, setScrollWidth] = useState(0)
+    const [scrollLeft, setScrollLeft] = useState(0)
+    const [progress, setProgress] = useState([...Array(9)].map(()=>{return 0}))
+    const [lastProgress, setLastProgress] = useState(0)
+
+    useEffect(()=>{
+        if(scrollWidth) {
+            setScrollLeft((scenceRef.current.offsetWidth - scrollWidth) / 2)
+        }
+    }, [scrollWidth])
+
+    useEffect(()=>{
+        containerRef.current.scrollLeft = scrollLeft
+        if(containerRef.current.scrollLeft !== scrollLeft)
+            setScrollLeft(containerRef.current.scrollLeft)
+
+        if(scrollWidth) {
+            const progress_index = Math.round(scrollLeft / scrollWidth)
+            if(progress_index !== lastProgress) {
+                let progress_arr = [...progress]
+                progress_arr[progress_index] = 1
+                progress_arr[lastProgress] = 0
+                setProgress(progress_arr)
+                setLastProgress(progress_index)
+            }
+        }
+    // eslint-disable-next-line
+    }, [scrollLeft, scrollWidth])
+
     function scrollImage(event) {
-        // containerRef.current.scrollLeft += event.deltaY > 0 ? 20 : -20
         if(slideInterval.current) clearInterval(slideInterval.current)
         if(slideTimeOut.current) clearTimeout(slideTimeOut.current)
 
-        containerRef.current.scrollLeft += event.deltaY > 0 ? 5 : -5
+        setScrollLeft(scrollLeft + (event.deltaY > 0 ? 50 : -50))
         slideInterval.current = setInterval(() => {
-            let adding = 5
+            let adding = 50
             adding = event.deltaY > 0 ? adding : -adding
-            containerRef.current.scrollLeft += adding
+            setScrollLeft(scrollLeft + adding)
         }, 1);
         slideTimeOut.current = setTimeout(() => {
             if(slideInterval.current)
@@ -43,21 +72,21 @@ function Tour({scence}) {
 
     function onMouseMove(event) {
         if(mouseDown) {
-            containerRef.current.scrollLeft += 
-            (mouseX - event.pageX)
+            setScrollLeft(scrollLeft + (mouseX - event.pageX))
         }
         setMouseX(event.pageX)
     }
 
-    function onSenceLoad() {
-        containerRef.current.scrollLeft = 
-        (scenceRef.current.offsetWidth - containerRef.current.offsetWidth) / 2;
+    function manualSetProgress(p) {
+        setScrollLeft(p * scrollWidth)
     }
 
     return (
         <div className='container' ref={containerRef} onWheel={scrollImage}>
+            <TourProgressBar progress={progress} manualSetProgress={manualSetProgress} />
             <Link to='/'><img className='logo'  src={logos.current[scence]} alt='logo' /></Link>
-            <img className='scence' ref={scenceRef} src={scences.current[scence]} alt="scence" onLoad={onSenceLoad}
+            <img className='scence' ref={scenceRef} src={scences.current[scence]} alt="scence" 
+                onLoad={()=>{setScrollWidth(containerRef.current.offsetWidth)}}
                 onMouseDown={()=>setMouseDown(true)} onMouseUp={()=>setMouseDown(false)} onMouseMove={onMouseMove}
                 onMouseLeave={()=>setMouseDown(false)} draggable={false} />
         </div>
