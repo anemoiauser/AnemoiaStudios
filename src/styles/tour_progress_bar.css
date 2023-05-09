@@ -1,0 +1,37 @@
+.tour-progress-bar-main {
+    position: fixed;
+    z-index: 5;
+    display: block;
+    width: fit-content;
+    height: fit-content;
+    left: calc((100vw - 734px) / 2);
+    bottom: 50px;
+    padding: 8px;
+}
+
+.tour-progress-bar-main .diamond-outer {
+    background-color: lightgray;
+    transform: translateY(14.63px) rotate(45deg);
+    width: 35.36px;
+    height: 35.36px;
+    display: inline-block;
+}
+.tour-progress-bar-main .diamond-outer:hover {cursor: pointer;}
+
+.tour-progress-bar-main .diamond-inner {
+    background-color: rgb(37,122,136);
+    border: 2px solid rgb(153,215,207);
+    display: block;
+    transform: translate(9px, 9px);
+    width: 15px;
+    height: 15px;
+    transition-duration: .5s;
+    opacity: 0;
+}
+
+.tour-progress-bar-main .connector {
+    background-color: lightgray;
+    width: 50px;
+    height: 5px;
+    display: inline-block;
+}
