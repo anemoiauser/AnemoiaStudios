@@ -19,10 +19,10 @@ body {
 
 .about-main .about-block {
     width: fit-content;
-    height: calc(99% - 30px);
+   
     overflow: hidden;
     display: block;
-    padding: 30px;
+    padding: 20px;
     border-left: 1px solid black;
     transition-duration: .3s;
     position: relative;
