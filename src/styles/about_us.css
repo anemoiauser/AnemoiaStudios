@@ -5,12 +5,12 @@ body {
 .about-main {
     display: block;
     white-space: nowrap;
-    height: 80vh;
-    width: 80vw;
+    height: 90vh;
+    width: 85vw;
     overflow-y: auto;
     position: absolute;
-    top: 10vh;
-    left: 10vw;
+    top: 5vh;
+    left: 5vw;
 }
 .about-main::-webkit-scrollbar {height: 8px;}
 .about-main::-webkit-scrollbar-track {background: rgba(0, 0, 0, 0);}
@@ -19,11 +19,9 @@ body {
 
 .about-main .about-block {
     width: fit-content;
-    min-width: 20vw;
-    max-width: 30vw;
-    height: calc(99% - 60px);
+    height: calc(99% - 30px);
     overflow: hidden;
-    display: inline-block;
+    display: block;
     padding: 30px;
     border-left: 1px solid black;
     transition-duration: .3s;
@@ -45,7 +43,7 @@ body {
 
 .about-main .about-company .main-img {
     width: 15vh;
-    height: 10vh;
+    height: 9vh;
     position: absolute;
 }
 
@@ -68,7 +66,11 @@ body {
     margin-right: 20px;
 }
 
+.about-main .people-container {
+    display: block;
+}
 .about-main .people {
+    display: inline-block;
     max-width: unset;
     text-align: center;
 }
@@ -79,7 +81,7 @@ body {
 
 .about-main .people span {
     display: block;
-    max-width: 25vw;
+    max-width: 33vw;
 }
 .about-main .people .name {
     font-size: large;

@@ -30,6 +30,7 @@ function AboutUs() {
                 <img className='affiliation' src={FemaleFounderLogo} alt='Female Founder Logo' />
                 <img className='affiliation' src={NewMediaFilmFestival} alt='New Media Film Festival' />
             </div>
+            <div className='people-container'>
             <div className='about-block people'>
                 <img className='photo' src={CEOPhoto} alt='CEO' />
                 <span className='name'>Bejá A.Christmas</span>
@@ -46,6 +47,8 @@ function AboutUs() {
                 Seeking a qualified individual(s) with a background in business administration, legalities, business contracts, labor law and contract law for corporate & media and entertainment. Most importantly an individual(s) that wishes to help build Anemoia Inc., into a safe, profitable, and successful corporate entity for Black people and other marginalized minorities in North America. (Lawyer preferred).”
                 </span>
             </div>
+            </div>
+            <div className='people-container'>
             <div className='about-block people'>
                 <img className='photo' src={Wanting} alt='Wanting Position' />
                 <span className='name'>OPEN POSITION</span>
@@ -61,6 +64,7 @@ function AboutUs() {
                 <span style={{marginTop: '20px'}}>
                 Seeking a qualified individual(s) with a background in economics, e-commerce, finance and finance distribution in the media and entertainment industry. Most importantly an individual(s) that wishes to help build Anemoia Inc., into a safe, profitable, and successful corporate entity for Black people and other marginalized minorities in North America. (Finance Wiz preferred)”
                 </span>
+            </div>
             </div>
             <div className='about-block people'>
                 <img className='photo' src={Wanting} alt='Wanting Position' />
