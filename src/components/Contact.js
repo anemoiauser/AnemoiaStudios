@@ -1,7 +1,13 @@
-import { React } from 'react';
+import { React, useEffect } from 'react';
 import '../styles/contact_us.css'
 
 const Contact = () => {
+
+    useEffect(() => {
+        document.title = "Anemoia Studios | Contact Us";
+        // eslint-disable-next-line
+    }, [])
+
     return (
         <section>
             <div className='content-container'>
