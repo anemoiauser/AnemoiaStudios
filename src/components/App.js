@@ -5,6 +5,7 @@ import Error from "./Error";
 import Menu from "./Menu";
 import AboutUs from "./AboutUs";
 import Tour from "./Tour";
+import Contact from "./Contact";
 
 function App() {
     return (
@@ -13,6 +14,7 @@ function App() {
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<AboutUs />} />
+                <Route path="/contact" element={<Contact />}/>
                 <Route path="/tour">
                     <Route path="studio" element={<Tour scene='studio' />} />
                     <Route path="anewood" element={<Tour scene='anewood' />} />
