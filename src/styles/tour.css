@@ -5,8 +5,7 @@
     top: 0;
     left: 0;
     display: block;
-    overflow-y: hidden;
-    overflow-x: auto;
+    overflow: hidden;
 }
 .container::-webkit-scrollbar {display: none;}
 
@@ -16,6 +15,9 @@
     /* height: 100%; */
     width: calc(100vw * 9);
     top: 0;
+    transform-origin: left;
+    transition-duration: 3s;
+    transform: translateX(0px);
 }
 
 .container .scene:hover {cursor: grab;}

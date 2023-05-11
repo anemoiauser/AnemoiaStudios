@@ -12,8 +12,6 @@ import { project_titles } from '../settings';
 function Tour({scene}) {
     const containerRef = useRef()
     const sceneRef = useRef()
-    const slideTimeOut = useRef()
-    const slideInterval = useRef()
 
     const scenes = useRef({
         anewood: Anewood,
@@ -30,8 +28,9 @@ function Tour({scene}) {
     const [mouseDown, setMouseDown] = useState(false)
     const [mouseX, setMouseX] = useState()
 
-    const [scrollWidth, setScrollWidth] = useState(0)
-    const [scrollLeft, setScrollLeft] = useState(0)
+    const containerWidth = useRef(0)
+    const maxTranslateX = useRef(0)
+    const [translateX, setTranslateX] = useState(0)
     const [progress, setProgress] = useState([...Array(9)].map(()=>{return 0}))
     const [lastProgress, setLastProgress] = useState(0)
 
@@ -40,18 +39,13 @@ function Tour({scene}) {
     }, [scene])
 
     useEffect(()=>{
-        if(scrollWidth) {
-            setScrollLeft((sceneRef.current.offsetWidth - scrollWidth) / 2)
-        }
-    }, [scrollWidth])
+        if(translateX < 0) setTranslateX(0)
+        else if(translateX > maxTranslateX.current) setTranslateX(maxTranslateX.current)
+        sceneRef.current.style.transform = `translateX(-${translateX}px)`
 
-    useEffect(()=>{
-        containerRef.current.scrollLeft = scrollLeft
-        if(containerRef.current.scrollLeft !== scrollLeft)
-            setScrollLeft(containerRef.current.scrollLeft)
-
-        if(scrollWidth) {
-            const progress_index = Math.round(scrollLeft / scrollWidth)
+        // set progress bar diamond
+        if(containerWidth.current) {
+            const progress_index = Math.round(translateX / containerWidth.current)
             if(progress_index !== lastProgress) {
                 let progress_arr = [...progress]
                 progress_arr[progress_index] = 1
@@ -61,34 +55,28 @@ function Tour({scene}) {
             }
         }
     // eslint-disable-next-line
-    }, [scrollLeft, scrollWidth])
+    }, [translateX])
+
+    function updateWidthInfo() {
+        containerWidth.current = containerRef.current.offsetWidth
+        maxTranslateX.current = sceneRef.current.offsetWidth - containerWidth.current
+        console.log(maxTranslateX.current);
+        setTranslateX(maxTranslateX.current / 2)
+    }
 
     function scrollImage(event) {
-        if(slideInterval.current) clearInterval(slideInterval.current)
-        if(slideTimeOut.current) clearTimeout(slideTimeOut.current)
-
-        setScrollLeft(scrollLeft + (event.deltaY > 0 ? 50 : -50))
-        slideInterval.current = setInterval(() => {
-            let adding = 50
-            adding = event.deltaY > 0 ? adding : -adding
-            setScrollLeft(scrollLeft + adding)
-        }, 1);
-        slideTimeOut.current = setTimeout(() => {
-            if(slideInterval.current)
-                clearInterval(slideInterval.current)
-        }, Math.abs(event.deltaY));
-
+        setTranslateX(translateX + event.deltaY)
     }
 
     function onMouseMove(event) {
         if(mouseDown) {
-            setScrollLeft(scrollLeft + (mouseX - event.pageX))
+            setTranslateX(translateX + (mouseX - event.pageX))
         }
         setMouseX(event.pageX)
     }
 
     function manualSetProgress(p) {
-        setScrollLeft(p * scrollWidth)
+        setTranslateX(p * containerWidth.current)
     }
 
     return (
@@ -99,7 +87,7 @@ function Tour({scene}) {
             <TourProgressBar progress={progress} manualSetProgress={manualSetProgress} />
             <Link to='/'><img className='logo'  src={logos.current[scene]} alt='logo' /></Link>
             <img className='scene' ref={sceneRef} src={scenes.current[scene]} alt="scene" 
-                onLoad={()=>{setScrollWidth(containerRef.current.offsetWidth)}} draggable={false} />
+                onLoad={updateWidthInfo} draggable={false} />
         </div>
     )
 }
