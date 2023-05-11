@@ -3,7 +3,7 @@ import '../styles/tour_progress_bar.css'
 
 function TourProgressBar({progress, manualSetProgress}) {
     return (
-        <div className='tour-progress-bar-main'>
+        <div className='tour-progress-bar-main' draggable={false}>
             {/* loop for 9 times to generate progress bar */}
             {[...Array(9)].map((_, i)=>{
                 return (

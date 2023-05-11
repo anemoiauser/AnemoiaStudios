@@ -6,6 +6,8 @@ import AnemoiaLogo from '../blob/anemoia_logo.png'
 import '../styles/tour.css'
 import { Link } from 'react-router-dom'
 import TourProgressBar from './TourProgressBar'
+import TourProjectTitles from './TourProjectTitles'
+import { project_titles } from '../settings';
 
 function Tour({scene}) {
     const containerRef = useRef()
@@ -21,6 +23,10 @@ function Tour({scene}) {
         anewood: AnewoodLogo,
         studio: AnemoiaLogo
     })
+
+    const [sceneTitles, setSceneTitles] = useState(
+        project_titles[scene])
+
     const [mouseDown, setMouseDown] = useState(false)
     const [mouseX, setMouseX] = useState()
 
@@ -28,6 +34,10 @@ function Tour({scene}) {
     const [scrollLeft, setScrollLeft] = useState(0)
     const [progress, setProgress] = useState([...Array(9)].map(()=>{return 0}))
     const [lastProgress, setLastProgress] = useState(0)
+
+    useEffect(()=>{
+        setSceneTitles(project_titles[scene])
+    }, [scene])
 
     useEffect(()=>{
         if(scrollWidth) {
@@ -82,13 +92,14 @@ function Tour({scene}) {
     }
 
     return (
-        <div className='container' ref={containerRef} onWheel={scrollImage}>
+        <div className='container' ref={containerRef} onWheel={scrollImage}
+                onMouseDown={()=>setMouseDown(true)} onMouseUp={()=>setMouseDown(false)} onMouseMove={onMouseMove}
+                onMouseLeave={()=>setMouseDown(false)} >
+            <TourProjectTitles scene_titles={sceneTitles} progress_index={lastProgress} />
             <TourProgressBar progress={progress} manualSetProgress={manualSetProgress} />
             <Link to='/'><img className='logo'  src={logos.current[scene]} alt='logo' /></Link>
             <img className='scene' ref={sceneRef} src={scenes.current[scene]} alt="scene" 
-                onLoad={()=>{setScrollWidth(containerRef.current.offsetWidth)}}
-                onMouseDown={()=>setMouseDown(true)} onMouseUp={()=>setMouseDown(false)} onMouseMove={onMouseMove}
-                onMouseLeave={()=>setMouseDown(false)} draggable={false} />
+                onLoad={()=>{setScrollWidth(containerRef.current.offsetWidth)}} draggable={false} />
         </div>
     )
 }
