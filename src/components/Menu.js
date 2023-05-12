@@ -21,8 +21,8 @@ function Menu() {
                 {
                     expandStatus.tour ? 
                     <>
-                    <Link to='/tour/studio' className='menu-item' onClick={()=>setMenuStatus(false)} replace={true}>Studios</Link>
-                    <Link to='/tour/anewood' className='menu-item' onClick={()=>setMenuStatus(false)} replace={true}>Anewood</Link>
+                    <Link to='/tour/studio' className='menu-item' onClick={()=>setMenuStatus(false)} replace={true}>Anemoia Studios</Link>
+                    <Link to='/tour/anewood' className='menu-item' onClick={()=>setMenuStatus(false)} replace={true}>Anewood Production</Link>
                     <Link to='/' className='menu-item' onClick={()=>setMenuStatus(false)} replace={true}>Tour Outside</Link>
                     </> : <></>
                 }
