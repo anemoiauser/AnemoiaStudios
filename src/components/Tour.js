@@ -60,7 +60,6 @@ function Tour({scene}) {
     function updateWidthInfo() {
         containerWidth.current = containerRef.current.offsetWidth
         maxTranslateX.current = sceneRef.current.offsetWidth - containerWidth.current
-        console.log(maxTranslateX.current);
         setTranslateX(maxTranslateX.current / 2)
     }
 
