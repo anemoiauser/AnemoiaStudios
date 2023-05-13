@@ -1,4 +1,4 @@
-import { React, useRef, useEffect } from 'react'
+import  React, { useRef, useEffect } from 'react'
 import '../styles/about_us.css'
 import AnewoodLogo from '../blob/anewood_logo.png'
 import FemaleFounderLogo from '../blob/FemaleFounderLogo.png'

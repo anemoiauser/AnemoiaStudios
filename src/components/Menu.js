@@ -1,4 +1,4 @@
-import { React, useState } from 'react'
+import  React,{ useState } from 'react'
 import '../styles/menu.css'
 import { CaretRightFill, Instagram, Linkedin, List, Twitter, XLg, Youtube } from 'react-bootstrap-icons'
 import { Link } from 'react-router-dom'
@@ -35,10 +35,10 @@ function Menu() {
                 <Link to='/' className='menu-item' onClick={()=>setMenuStatus(false)}>Contact Us</Link>
             </div>
             <div className='media-menu'>
-                <a rel="noreferrer" href='https://www.youtube.com/channel/UCPAhZ9M74b5puxbLj--Kd_Q' target='_blank'><Youtube className='menu-item' /></a>
-                <a rel="noreferrer" href='https://instagram.com/anemoiastudios' target='_blank'><Instagram className='menu-item' /></a>
-                <a rel="noreferrer" href='https://twitter.com/anemoiainc' target='_blank'><Twitter className='menu-item' /></a>
-                <a rel="noreferrer" href='https://www.linkedin.com/company/anemoia-studios-inc' target='_blank'><Linkedin className='menu-item' /></a>
+                <a rel="noopener noreferrer" href='https://www.youtube.com/channel/UCPAhZ9M74b5puxbLj--Kd_Q' target='_blank'><Youtube className='menu-item' /></a>
+                <a rel="noopener noreferrer" href='https://instagram.com/anemoiastudios' target='_blank'><Instagram className='menu-item' /></a>
+                <a rel="noopener noreferrer" href='https://twitter.com/anemoiainc' target='_blank'><Twitter className='menu-item' /></a>
+                <a rel="noopener noreferrer" href='https://www.linkedin.com/company/anemoia-studios-inc' target='_blank'><Linkedin className='menu-item' /></a>
             </div>
         </div> :
         <div className='hamburger-btn' onClick={()=>{setMenuStatus(true)}}>

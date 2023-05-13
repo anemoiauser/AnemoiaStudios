@@ -1,4 +1,4 @@
-import { React } from 'react'
+import  React  from 'react'
 import '../styles/tour_progress_bar.css'
 
 function TourProgressBar({progress, manualSetProgress}) {
