@@ -7,6 +7,7 @@ import CEOPhoto from '../blob/CEO copy.png'
 import Wanting from '../blob/wanting.png'
 
 function AboutUs() {
+      
     const about_main_ref = useRef()
     
     useEffect(()=>{
@@ -21,9 +22,11 @@ function AboutUs() {
     return (
         <div className='about-main' ref={about_main_ref} onWheel={scrollToHorizontal}>
             <div className='about-block about-company'>
+                <div className='tagline'>
                 <img className='main-img' src={AnewoodLogo} alt='anewood logo' />
                 <span className='tagline'>We are the ones we've been waiting for.<br/>
                 Welcome to Anéwood.</span>
+                </div>
                 <span className='summary'>
                     Anemoia Inc. a Production House, Streaming Distribution, Publishing House & Talent Agency that will focus on promoting Black Americans, POC and other marginalized communities in the United States entertainment industry. We aim to build upon the talent of Black Americans through our production and distribution channels. We will use our expertise in Film Production, Music, Animation, Advertisement, Publication & Streaming services to showcase and promote Black and other marginalized community talent in the industry. Our focus? Creating content to share stories, experiences, and culture.
                 </span>
@@ -66,6 +69,7 @@ function AboutUs() {
                 </span>
             </div>
             </div>
+            <div className='people-container'>
             <div className='about-block people'>
                 <img className='photo' src={Wanting} alt='Wanting Position' />
                 <span className='name'>OPEN POSITION</span>
@@ -73,6 +77,7 @@ function AboutUs() {
                 <span style={{marginTop: '20px'}}>
                 Seeking a qualified individual(s) with a background in operations and infrastructure, specifically regarding production studios & corporate offices. Most importantly an individual(s) that wishes to help build Anemoia Inc., into a safe, profitable, and successful corporate entity for Black people and other marginalized minorities in North America. (Executive Experience preferred but not required)”
                 </span>
+            </div>
             </div>
         </div>
     )
