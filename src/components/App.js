@@ -5,6 +5,8 @@ import Error from "./Error";
 import Menu from "./Menu";
 import AboutUs from "./AboutUs";
 import Tour from "./Tour";
+import AnemoiaProjects from "./projects/AnemoiaProjects";
+import AnewoodProjects from "./projects/AnewoodProjects";
 
 function App() {
     return (
@@ -16,6 +18,10 @@ function App() {
                 <Route path="/tour">
                     <Route path="studio" element={<Tour scene='studio' />} />
                     <Route path="anewood" element={<Tour scene='anewood' />} />
+                </Route>
+                <Route path="/projects">
+                    <Route path="anemoia" element={<AnemoiaProjects scene='anemoia' />} />
+                    <Route path="anewood" element={<AnewoodProjects scene='anewood' />} />
                 </Route>
                 <Route path="*" element={<Error />} />
             </Routes>

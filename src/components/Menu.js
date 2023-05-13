@@ -29,6 +29,13 @@ function Menu() {
                 </div>
                 <div className='menu-item' onClick={()=>setExpandStatus({...expandStatus, projects: !expandStatus.projects})}
                 >Projects <CaretRightFill className={`expand${expandStatus.projects ? ' expand-rotated' : ''}`} />
+                {
+                    expandStatus.projects ? 
+                    <>
+                    <Link to='/projects/anemoia' className='menu-item' onClick={()=>setMenuStatus(false)}>Anemoia</Link>
+                    <Link to='/projects/anewood' className='menu-item' onClick={()=>setMenuStatus(false)}>Anewood</Link>
+                    </> : <></>
+                }
                 </div>
                 <Link to='/' className='menu-item' onClick={()=>setMenuStatus(false)}>Designs</Link>
                 <Link to='/about' className='menu-item' onClick={()=>setMenuStatus(false)}>About Us</Link>
