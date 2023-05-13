@@ -6,23 +6,23 @@ import '../../../node_modules/flickity/css/flickity.css'
 import '../../styles/anemoia_projects.css'
 
 import AnemoiaLogo from '../../blob/anemoia_logo.png'
-import AnemoiaProjectAdultEntertainment1 from '../../blob/projects/adult_entertainment-1-1024x577.jpg'
-import AnemoiaProjectAdultEntertainment4 from '../../blob/projects/adult_entertainment-4-768x433.jpg'
-import AnemoiaProjectAnimationStudio1 from '../../blob/projects/animation_studio-1-1024x577.jpg'
-import AnemoiaProjectAnimationStudio4 from '../../blob/projects/animation_studio-4-768x433.jpg'
-import AnemoiaProjectAnimationStudio5 from '../../blob/projects/animation_studio-5-768x433.jpg'
-import AnemoiaProjectAuditionCenter1 from '../../blob/projects/audition_center-1-768x433.jpg'
-import AnemoiaProjectAuditionCenter6 from '../../blob/projects/audition_center-6-768x433.jpg'
-import AnemoiaProjectAuditionCenter7 from '../../blob/projects/audition_center-7-1024x577.jpg'
-import AnemoiaProjectAuditionCenter8 from '../../blob/projects/audition_center-8-768x433.jpg'
-import AnemoiaProjectBroadcastingStudio1 from '../../blob/projects/broadcasting_studio-1-1024x577.jpg'
-import AnemoiaProjectFilmStudio2 from '../../blob/projects/film_studio-2-768x433.jpg'
-import AnemoiaProjectFilmStudio4 from '../../blob/projects/film_studio-4-768x433.jpg'
-import AnemoiaProjectFilmStudio5 from '../../blob/projects/film_studio-5-1024x577.jpg'
-import AnemoiaProjectFilmStudio6 from '../../blob/projects/film_studio-6-768x433.jpg'
-import AnemoiaProjectMusicStudio1 from '../../blob/projects/music_studio-1-768x433.jpg'
-import AnemoiaProjectMusicStudio4 from '../../blob/projects/music_studio-4-768x433.jpg'
-import AnemoiaProjectWritersStudio6 from '../../blob/projects/writers_studio-6-768x433.jpg'
+import AdultEntertainment1 from '../../blob/projects/adult_entertainment-1-1024x577.jpg'
+import AdultEntertainment4 from '../../blob/projects/adult_entertainment-4-768x433.jpg'
+import AnimationStudio1 from '../../blob/projects/animation_studio-1-1024x577.jpg'
+import AnimationStudio4 from '../../blob/projects/animation_studio-4-768x433.jpg'
+import AnimationStudio5 from '../../blob/projects/animation_studio-5-768x433.jpg'
+import AuditionCenter1 from '../../blob/projects/audition_center-1-768x433.jpg'
+import AuditionCenter6 from '../../blob/projects/audition_center-6-768x433.jpg'
+import AuditionCenter7 from '../../blob/projects/audition_center-7-1024x577.jpg'
+import AuditionCenter8 from '../../blob/projects/audition_center-8-768x433.jpg'
+import BroadcastingStudio1 from '../../blob/projects/broadcasting_studio-1-1024x577.jpg'
+import FilmStudio2 from '../../blob/projects/film_studio-2-768x433.jpg'
+import FilmStudio4 from '../../blob/projects/film_studio-4-768x433.jpg'
+import FilmStudio5 from '../../blob/projects/film_studio-5-1024x577.jpg'
+import FilmStudio6 from '../../blob/projects/film_studio-6-768x433.jpg'
+import MusicStudio1 from '../../blob/projects/music_studio-1-768x433.jpg'
+import MusicStudio4 from '../../blob/projects/music_studio-4-768x433.jpg'
+import WritersStudio6 from '../../blob/projects/writers_studio-6-768x433.jpg'
 
 function AnemoiaProjects() {
     
@@ -58,24 +58,24 @@ function AnemoiaProjects() {
                 notch underrepresented talent on a consistent basis. Which is why Anemoia is designed with multipurpose and function in mind.
                 <br></br><br></br>Thank You For Touring with Us. Be Sure to Help Our Fundraising Efforts by Clicking “Gift Action”. Anemoia Inc., is 
                 Currently Crowdfunding on “ifundwomen.com”. To See This Design Become a Reality, Anemoia Needs YOUR Help! Please Take The Time to
-                Make a Contribution to Anemoia’s Campaign to Help Build Our Studio Home. 💛❄️🌳🌸<br></br><br></br>Please browse our Projects...</div></div>
-                <div className="cell"><Link to='/AnemoiaProjectAdultEntertainment1'><span>Emoia Entertainment</span><img alt='Emoia Entertainment' src={AnemoiaProjectAdultEntertainment1} /></Link></div>
-                <div className="cell"><Link to='/AnemoiaProjectAdultEntertainment4'><span>Emoia Entertainment</span><img alt='Emoia Entertainment' src={AnemoiaProjectAdultEntertainment4} /></Link></div>
-                <div className="cell"><Link to='/AnemoiaProjectAnimationStudio1'><span>BANI Studio</span><img alt='BANI Studio' src={AnemoiaProjectAnimationStudio1} /></Link></div>
-                <div className="cell"><Link to='/AnemoiaProjectAnimationStudio4'><span>BANI Studio</span><img alt='BANI Studio' src={AnemoiaProjectAnimationStudio4} /></Link></div>
-                <div className="cell"><Link to='/AnemoiaProjectAnimationStudio5'><span>BANI Center</span><img alt='BANI Studio' src={AnemoiaProjectAnimationStudio5} /></Link></div>
-                <div className="cell"><Link to='/AnemoiaProjectAuditionCenter1'><span>Audition Center</span><img alt='Audition Center' src={AnemoiaProjectAuditionCenter1} /></Link></div>
-                <div className="cell"><Link to='/AnemoiaProjectAuditionCenter6'><span>Audition Center</span><img alt='Audition Center' src={AnemoiaProjectAuditionCenter6} /></Link></div>
-                <div className="cell"><Link to='/AnemoiaProjectAuditionCenter7'><span>Audition Center</span><img alt='Audition Center' src={AnemoiaProjectAuditionCenter7} /></Link></div>
-                <div className="cell"><Link to='/AnemoiaProjectAuditionCenter8'><span>Audition Center</span><img alt='Audition Center' src={AnemoiaProjectAuditionCenter8} /></Link></div>
-                <div className="cell"><Link to='/AnemoiaProjectBroadcastingStudio1'><span>Broadcasting Studio</span><img alt='Broadcasting Studio' src={AnemoiaProjectBroadcastingStudio1} /></Link></div>
-                <div className="cell"><Link to='/AnemoiaProjectFilmStudio2'><span>Film Studio</span><img alt='Film Studio' src={AnemoiaProjectFilmStudio2} /></Link></div>
-                <div className="cell"><Link to='/AnemoiaProjectFilmStudio4'><span>Film Studio</span><img alt='Film Studio' src={AnemoiaProjectFilmStudio4} /></Link></div>
-                <div className="cell"><Link to='/AnemoiaProjectFilmStudio5'><span>Film Studio</span><img alt='Film Studio' src={AnemoiaProjectFilmStudio5} /></Link></div>
-                <div className="cell"><Link to='/AnemoiaProjectFilmStudio6'><span>Film Studio</span><img alt='Film Studio' src={AnemoiaProjectFilmStudio6} /></Link></div>
-                <div className="cell"><Link to='/AnemoiaProjectMusicStudio1'><span>Music Studio</span><img alt='Music Studio' src={AnemoiaProjectMusicStudio1} /></Link></div>
-                <div className="cell"><Link to='/AnemoiaProjectMusicStudio4'><span>Music Studio</span><img alt='Music Studio' src={AnemoiaProjectMusicStudio4} /></Link></div>
-                <div className="cell"><Link to='/AnemoiaProjectWritersStudio6'><span>Writers Studio Northbourne</span><img alt='Writers Studio' src={AnemoiaProjectWritersStudio6} /></Link></div>
+                Make a Contribution to Anemoia’s Campaign to Help Build Our Studio Home.<br></br><br></br>Please browse our Projects...</div></div>
+                <div className="cell"><Link to='/projects/AdultEntertainment1'><span>Emoia Entertainment</span><img alt='Emoia Entertainment' src={AdultEntertainment1} /></Link></div>
+                <div className="cell"><Link to='/projects/AdultEntertainment4'><span>Emoia Entertainment</span><img alt='Emoia Entertainment' src={AdultEntertainment4} /></Link></div>
+                <div className="cell"><Link to='/projects/AnimationStudio1'><span>BANI Studio</span><img alt='BANI Studio' src={AnimationStudio1} /></Link></div>
+                <div className="cell"><Link to='/projects/AnimationStudio4'><span>BANI Studio</span><img alt='BANI Studio' src={AnimationStudio4} /></Link></div>
+                <div className="cell"><Link to='/projects/AnimationStudio5'><span>BANI Studio</span><img alt='BANI Studio' src={AnimationStudio5} /></Link></div>
+                <div className="cell"><Link to='/projects/AuditionCenter1'><span>Audition Center</span><img alt='Audition Center' src={AuditionCenter1} /></Link></div>
+                <div className="cell"><Link to='/projects/AuditionCenter6'><span>Audition Center</span><img alt='Audition Center' src={AuditionCenter6} /></Link></div>
+                <div className="cell"><Link to='/projects/AuditionCenter7'><span>Audition Center</span><img alt='Audition Center' src={AuditionCenter7} /></Link></div>
+                <div className="cell"><Link to='/projects/AuditionCenter8'><span>Audition Center</span><img alt='Audition Center' src={AuditionCenter8} /></Link></div>
+                <div className="cell"><Link to='/projects/BroadcastingStudio1'><span>Broadcasting Studio Northbourne</span><img alt='Broadcasting Studio' src={BroadcastingStudio1} /></Link></div>
+                <div className="cell"><Link to='/projects/FilmStudio2'><span>Film Studio</span><img alt='Film Studio' src={FilmStudio2} /></Link></div>
+                <div className="cell"><Link to='/projects/FilmStudio4'><span>Film Studio</span><img alt='Film Studio' src={FilmStudio4} /></Link></div>
+                <div className="cell"><Link to='/projects/FilmStudio5'><span>Film Studio</span><img alt='Film Studio' src={FilmStudio5} /></Link></div>
+                <div className="cell"><Link to='/projects/FilmStudio6'><span>Film Studio</span><img alt='Film Studio' src={FilmStudio6} /></Link></div>
+                <div className="cell"><Link to='/projects/MusicStudio1'><span>Music Studio</span><img alt='Music Studio' src={MusicStudio1} /></Link></div>
+                <div className="cell"><Link to='/projects/MusicStudio4'><span>Music Studio</span><img alt='Music Studio' src={MusicStudio4} /></Link></div>
+                <div className="cell"><Link to='/projects/WritersStudio6'><span>Writers Studio</span><img alt='Writers Studio' src={WritersStudio6} /></Link></div>
 
  </Flickity> 
 
@@ -85,24 +85,24 @@ function AnemoiaProjects() {
     options={testimonialFlickityOptions}
     disableImagesLoaded={false}
   >
- <div className="cell"><span>Anemoia Projects</span></div>
-                <div className="cell"><span>Emoia Entertainment</span><img alt='Emoia Entertainment' src={AnemoiaProjectAdultEntertainment1} /></div>
-                <div className="cell"><span>Emoia Entertainment</span><img alt='Emoia Entertainment' src={AnemoiaProjectAdultEntertainment4} /></div>
-                <div className="cell"><span>BANI Studio</span><img alt='BANI Studio' src={AnemoiaProjectAnimationStudio1} /></div>
-                <div className="cell"><span>BANI Studio</span><img alt='BANI Studio' src={AnemoiaProjectAnimationStudio4} /></div>
-                <div className="cell"><span>BANI Center</span><img alt='BANI Studio' src={AnemoiaProjectAnimationStudio5} /></div>
-                <div className="cell"><span>Audition Center</span><img alt='Audition Center' src={AnemoiaProjectAuditionCenter1} /></div>
-                <div className="cell"><span>Audition Center</span><img alt='Audition Center' src={AnemoiaProjectAuditionCenter6} /></div>
-                <div className="cell"><span>Audition Center</span><img alt='Audition Center' src={AnemoiaProjectAuditionCenter7} /></div>
-                <div className="cell"><span>Audition Center</span><img alt='Audition Center' src={AnemoiaProjectAuditionCenter8} /></div>
-                <div className="cell"><span>Broadcasting Studio</span><img alt='Broadcasting Studio' src={AnemoiaProjectBroadcastingStudio1} /></div>
-                <div className="cell"><span>Film Studio</span><img alt='Film Studio' src={AnemoiaProjectFilmStudio2} /></div>
-                <div className="cell"><span>Film Studio</span><img alt='Film Studio' src={AnemoiaProjectFilmStudio4} /></div>
-                <div className="cell"><span>Film Studio</span><img alt='Film Studio' src={AnemoiaProjectFilmStudio5} /></div>
-                <div className="cell"><span>Film Studio</span><img alt='Film Studio' src={AnemoiaProjectFilmStudio6} /></div>
-                <div className="cell"><span>Music Studio</span><img alt='Music Studio' src={AnemoiaProjectMusicStudio1} /></div>
-                <div className="cell"><span>Music Studio</span><img alt='Music Studio' src={AnemoiaProjectMusicStudio4} /></div>
-                <div className="cell"><span>Writers Studio Northbourne</span><img alt='Writers Studio' src={AnemoiaProjectWritersStudio6} /></div>
+ <div className="cell"><span><br></br><br></br>Anemoia Projects</span></div>
+                <div className="cell"><span>Emoia Entertainment</span><img alt='Emoia Entertainment' src={AdultEntertainment1} /></div>
+                <div className="cell"><span>Emoia Entertainment</span><img alt='Emoia Entertainment' src={AdultEntertainment4} /></div>
+                <div className="cell"><span>BANI Studio</span><img alt='BANI Studio' src={AnimationStudio1} /></div>
+                <div className="cell"><span>BANI Studio</span><img alt='BANI Studio' src={AnimationStudio4} /></div>
+                <div className="cell"><span>BANI Studio</span><img alt='BANI Studio' src={AnimationStudio5} /></div>
+                <div className="cell"><span>Audition Center</span><img alt='Audition Center' src={AuditionCenter1} /></div>
+                <div className="cell"><span>Audition Center</span><img alt='Audition Center' src={AuditionCenter6} /></div>
+                <div className="cell"><span>Audition Center</span><img alt='Audition Center' src={AuditionCenter7} /></div>
+                <div className="cell"><span>Audition Center</span><img alt='Audition Center' src={AuditionCenter8} /></div>
+                <div className="cell"><span>Broadcasting Studio Northbourne</span><img alt='Broadcasting Studio' src={BroadcastingStudio1} /></div>
+                <div className="cell"><span>Film Studio</span><img alt='Film Studio' src={FilmStudio2} /></div>
+                <div className="cell"><span>Film Studio</span><img alt='Film Studio' src={FilmStudio4} /></div>
+                <div className="cell"><span>Film Studio</span><img alt='Film Studio' src={FilmStudio5} /></div>
+                <div className="cell"><span>Film Studio</span><img alt='Film Studio' src={FilmStudio6} /></div>
+                <div className="cell"><span>Music Studio</span><img alt='Music Studio' src={MusicStudio1} /></div>
+                <div className="cell"><span>Music Studio</span><img alt='Music Studio' src={MusicStudio4} /></div>
+                <div className="cell"><span>Writers Studio</span><img alt='Writers Studio' src={WritersStudio6} /></div>
 
     </Flickity>  
 </>

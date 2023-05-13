@@ -1,6 +1,9 @@
 import  React, {useEffect } from 'react'
 import '../../styles/anemoia_project.css'
-
+import AnemoiaLogo from '../../blob/anemoia_logo.png'
+import AdultEntertainment1 from '../../blob/projects/adult_entertainment-1-1024x577.jpg'
+import AdultEntertainment4 from '../../blob/projects/adult_entertainment-4-768x433.jpg'
+import AuditionCenter6 from '../../blob/projects/audition_center-7-1024x577.jpeg'
 
 function AnemoiaProjectAdultEntertainment1() {
     
@@ -10,9 +13,14 @@ function AnemoiaProjectAdultEntertainment1() {
     }, [])
 
     return (
+        <><img className='logo' alt='Anemoia studios logo' src={AnemoiaLogo} />
         <div className='anemoia_project'>
-
-        </div>
+           <span className='title'>EMOIA Entertainment</span>
+           <span className='quote'>At Anemoia Inc., we fully support sex workers and their respective content. EMOIA Entertainment is Studio that provides for the underrepresented Adult Entertainers of the world.</span>
+           <img className='project-img' alt='Anemoia studios emoia entertainment' src={AdultEntertainment1} />
+           <img className='project-img' alt='Anemoia studios emoia entertainment' src={AdultEntertainment4} />
+           <img className='project-img' alt='Anemoia studios emoia entertainment' src={AuditionCenter6} />
+       </div></>
     )
 }
 
