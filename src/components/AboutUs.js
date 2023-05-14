@@ -29,7 +29,7 @@ function AboutUs() {
                 </span>
                 <img className='affiliation' src={FemaleFounderLogo} alt='Female Founder Logo' />
                 <img className='affiliation' src={NewMediaFilmFestival} alt='New Media Film Festival' />
-            </div>
+            </div> 
             <div className='about-block people'>
                 <img className='photo' src={CEOPhoto} alt='CEO' />
                 <span className='name'>Bejá A.Christmas</span>

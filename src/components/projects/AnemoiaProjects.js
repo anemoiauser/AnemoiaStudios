@@ -30,7 +30,7 @@ function AnemoiaProjects() {
         document.title = 'Anemoia Studios - Projects';
     }, [])
 
-    const flickityOptions = {
+    const flickityOptions = { 
         wrapAround: false,
         pageDots: false,
         arrowShape:
