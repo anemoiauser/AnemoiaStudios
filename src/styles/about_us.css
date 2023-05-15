@@ -5,12 +5,12 @@ body {
 .about-main {
     display: block;
     white-space: nowrap;
-    height: 80vh;
-    width: 80vw;
+    height: 90vh;
+    width: 85vw;
     overflow-y: auto;
     position: absolute;
-    top: 10vh;
-    left: 10vw;
+    top: 5vh;
+    left: 5vw;
 }
 .about-main::-webkit-scrollbar {height: 8px;}
 .about-main::-webkit-scrollbar-track {background: rgba(0, 0, 0, 0);}
@@ -19,13 +19,12 @@ body {
 
 .about-main .about-block {
     width: fit-content;
-    min-width: 20vw;
-    max-width: 30vw;
-    height: calc(99% - 60px);
-    overflow: hidden;
-    display: inline-block;
-    padding: 30px;
+   
+    overflow: visible;
+    display: block;
+    padding: 15px;
     border-left: 1px solid black;
+    border-right: 1px solid black;
     transition-duration: .3s;
     position: relative;
     overflow-y: auto;
@@ -41,17 +40,20 @@ body {
 }
 .about-main .about-block:last-child {
     border-right: 1px solid black;
+    
 }
 
 .about-main .about-company .main-img {
     width: 15vh;
-    height: 10vh;
-    position: absolute;
+    height: 9vh;
+    position: sticky;
+    padding-left: 0vh;
+    padding-top: 0vh;
 }
 
 .about-main .about-company .tagline {
-    margin-left: 20vh;
-    display: block;
+    margin-left: 5vh;
+    display: inline-block;
     font-size: large;
     font-weight: bold;
 }
@@ -64,23 +66,66 @@ body {
 .about-main .about-company .affiliation {
     height: 15vh;
     display: inline-block;
-    margin-top: 20px;
-    margin-right: 20px;
+    margin-top: 15px;
+    margin-right: 15px;
+    margin-bottom: 15px;
 }
 
-.about-main .people {
-    max-width: unset;
-    text-align: center;
-}
+
+@media only screen and (max-width: 1024px) {
+    .about-main .people {
+        height: 70%;
+        width: fit-content;
+        display: block;
+        border-left: 1px solid black;
+        border-right: 1px solid black;
+        text-align: center;
+    }
+
+    .about-main .people-container {
+        display: inline;
+        height: 60%;
+        width: fit-content;
+       
+    }
+    .about-main .people span {
+        margin-left: 20px;
+        display: block;
+        max-width: 80%;
+        
+    }
+    
+} 
+
+@media only screen and (min-width: 1024px) {
+    .about-main .people {
+        height: 100%;
+        display: inline-block;
+        width: fit-content;
+        border-left: 1px solid black;
+        border-right: 1px solid black;
+        text-align: center;
+    }
+    .about-main .people-container {
+        display: block;
+        height: 60%;
+        width: fit-content;
+    }
+    
+    .about-main .people span {
+        display: block;
+        max-width: 38.5vw;
+    }
+} 
+
+
+
 
 .about-main .people .photo {
     width: 10vw;
 }
 
-.about-main .people span {
-    display: block;
-    max-width: 25vw;
-}
+
 .about-main .people .name {
     font-size: large;
     font-weight: bold;
