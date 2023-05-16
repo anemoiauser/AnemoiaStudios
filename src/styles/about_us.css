@@ -109,13 +109,13 @@ body {
     .about-main .people-container {
         display: block;
         height: 60%;
-        width: fit-content;
+        width: 50%;
     }
     
     .about-main .people span {
         display: block;
-        max-width: 38.5vw;
     }
+  
 } 
 
 
