@@ -88,11 +88,12 @@ function Tour({scene, frames}) {
         setTranslateX(realTranslateX(translateX + event.deltaY))
     }
 
-    function onMouseMove(event) {
+    function onMouseMove(event, mobile_touch = false) {
+        const pageX = (mobile_touch ? event.changedTouches[0].pageX : event.pageX) || 0
         if(mouseDown) {
-            setTranslateX(realTranslateX(translateX + (mouseX - event.pageX)))
+            setTranslateX(realTranslateX(translateX + (mouseX - pageX)))
         }
-        setMouseX(event.pageX)
+        setMouseX(pageX)
     }
 
     function manualSetProgress(p) {
@@ -105,7 +106,8 @@ function Tour({scene, frames}) {
     return (
         <div className='container' ref={containerRef} onWheel={scrollImage}
                 onMouseDown={()=>setMouseDown(true)} onMouseUp={()=>setMouseDown(false)} onMouseMove={onMouseMove}
-                onMouseLeave={()=>setMouseDown(false)} >
+                onMouseLeave={()=>setMouseDown(false)} 
+                onTouchStart={()=>setMouseDown(true)} onTouchEnd={()=>setMouseDown(false)} onTouchMove={e=>onMouseMove(e, true)}>
             <TourProjectTitles scene_titles={sceneTitles} progress_index={lastProgress} />
             <TourProgressBar progress={progress} manualSetProgress={manualSetProgress}
                 progressBarRef={progressBarRef} left={progressBarLeft} />
