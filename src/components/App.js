@@ -1,4 +1,4 @@
-import  React  from "react";
+import  React, { useEffect, useRef, useState }  from "react";
 import { BrowserRouter, Route, Routes} from "react-router-dom";
 import Home from "./Home";
 import Error from "./Error";
@@ -26,12 +26,28 @@ import AnemoiaProjectFilmStudio4 from "./projects/AnemoiaProjectFilmStudio4";
 import AnemoiaProjectFilmStudio5 from "./projects/AnemoiaProjectFilmStudio5";
 import AnemoiaProjectFilmStudio6 from "./projects/AnemoiaProjectFilmStudio6";
 
+import AnemoiaThemeSong from '../blob/Anemoia Theme Song Instrumentals.wav'
+
 function App() {
+
+    const bgm = useRef()
+    const [playBGM, setPlayBGM] = useState(false)
+
+    useEffect(()=>{
+        bgm.current = new Audio(AnemoiaThemeSong)
+        bgm.current.loop = true
+    }, [])
+    
+    useEffect(()=>{
+        if(playBGM) bgm.current.play()
+        else bgm.current.pause()
+    }, [playBGM])
+
     return (
         <BrowserRouter>
             <Menu />
             <Routes>
-                <Route path="/" element={<Home />} />
+                <Route path="/" element={<Home playBGM={playBGM} setPlayBGM={setPlayBGM} />} />
                 <Route path="/about" element={<AboutUs />} />
                 <Route path="/contact" element={<Contact />}/>
                 <Route path="/tour">
