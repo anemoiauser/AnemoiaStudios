@@ -35,8 +35,9 @@ function App() {
                 <Route path="/about" element={<AboutUs />} />
                 <Route path="/contact" element={<Contact />}/>
                 <Route path="/tour">
-                    <Route path="studio" element={<Tour scene='studio' />} />
-                    <Route path="anewood" element={<Tour scene='anewood' />} />
+                    <Route path="studio" element={<Tour scene='studio' frames={9} />} />
+                    <Route path="anewood" element={<Tour scene='anewood' frames={9} />} />
+                    <Route path="outside" element={<Tour scene='outside' frames={7} />} />
                 </Route>
                 <Route path="/projects">
                     <Route path="anemoia" element={<AnemoiaProjects scene='anemoia' />} />

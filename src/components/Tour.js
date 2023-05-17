@@ -1,6 +1,7 @@
 import  React,{ useEffect, useRef, useState } from 'react'
 import Anewood from '../blob/anewood.jpg'
 import Studio from '../blob/studio.jpg'
+import Outside from '../blob/front.jpg'
 import AnewoodLogo from '../blob/anewood_logo.png'
 import AnemoiaLogo from '../blob/anemoia_logo.png'
 import '../styles/tour.css'
@@ -9,17 +10,20 @@ import TourProgressBar from './TourProgressBar'
 import TourProjectTitles from './TourProjectTitles'
 import { project_titles } from '../settings';
 
-function Tour({scene}) {
+function Tour({scene, frames}) {
     const containerRef = useRef()
     const sceneRef = useRef()
+    const progressBarRef = useRef()
 
     const scenes = useRef({
         anewood: Anewood,
-        studio: Studio
+        studio: Studio,
+        outside: Outside
     })
     const logos = useRef({
         anewood: AnewoodLogo,
-        studio: AnemoiaLogo
+        studio: AnemoiaLogo,
+        outside: AnemoiaLogo
     })
 
     const [sceneTitles, setSceneTitles] = useState(
@@ -28,15 +32,20 @@ function Tour({scene}) {
     const [mouseDown, setMouseDown] = useState(false)
     const [mouseX, setMouseX] = useState()
 
-    const containerWidth = useRef(0)
+    const frameWidth = useRef(0)
     const maxTranslateX = useRef(0)
     const [translateX, setTranslateX] = useState(0)
-    const [progress, setProgress] = useState([...Array(9)].map(()=>{return 0}))
+    const [progressBarLeft, setProgressBarLeft] = useState(0)
+    const [progress, setProgress] = useState([...Array(frames)].map(()=>{return 0}))
     const [lastProgress, setLastProgress] = useState(0)
 
     useEffect(()=>{
         setSceneTitles(project_titles[scene])
-    }, [scene])
+        setProgress([...Array(frames)].map(()=>{return 0}))
+        setLastProgress(undefined)
+        updateWidthInfo()
+    // eslint-disable-next-line
+    }, [scene, frames])
 
     useEffect(()=>{
         if(translateX < 0) setTranslateX(0)
@@ -44,8 +53,9 @@ function Tour({scene}) {
         sceneRef.current.style.transform = `translateX(-${translateX}px)`
 
         // set progress bar diamond
-        if(containerWidth.current) {
-            const progress_index = Math.round(translateX / containerWidth.current)
+        if(frameWidth.current) {
+            const progress_index = translateX === maxTranslateX.current ?
+                progress.length - 1 : Math.round(translateX / frameWidth.current)
             if(progress_index !== lastProgress) {
                 let progress_arr = [...progress]
                 progress_arr[progress_index] = 1
@@ -58,9 +68,14 @@ function Tour({scene}) {
     }, [translateX])
 
     function updateWidthInfo() {
-        containerWidth.current = containerRef.current.offsetWidth
-        maxTranslateX.current = sceneRef.current.offsetWidth - containerWidth.current
+        // scene
+        frameWidth.current = sceneRef.current.offsetWidth / frames
+        maxTranslateX.current = 
+            sceneRef.current.offsetWidth - containerRef.current.offsetWidth
         setTranslateX(maxTranslateX.current / 2)
+
+        // progress bar
+        setProgressBarLeft((containerRef.current.offsetWidth - progressBarRef.current.offsetWidth) / 2)
     }
 
     function scrollImage(event) {
@@ -75,7 +90,10 @@ function Tour({scene}) {
     }
 
     function manualSetProgress(p) {
-        setTranslateX(p * containerWidth.current)
+        const container_width = containerRef.current.offsetWidth
+        let left = p * frameWidth.current
+        left += (frameWidth.current - container_width) / 2
+        setTranslateX(left)
     }
 
     return (
@@ -83,7 +101,8 @@ function Tour({scene}) {
                 onMouseDown={()=>setMouseDown(true)} onMouseUp={()=>setMouseDown(false)} onMouseMove={onMouseMove}
                 onMouseLeave={()=>setMouseDown(false)} >
             <TourProjectTitles scene_titles={sceneTitles} progress_index={lastProgress} />
-            <TourProgressBar progress={progress} manualSetProgress={manualSetProgress} />
+            <TourProgressBar progress={progress} manualSetProgress={manualSetProgress}
+                progressBarRef={progressBarRef} left={progressBarLeft} />
             <Link to='/'><img className='logo'  src={logos.current[scene]} alt='logo' /></Link>
             <img className='scene' ref={sceneRef} src={scenes.current[scene]} alt="scene" 
                 onLoad={updateWidthInfo} draggable={false} />

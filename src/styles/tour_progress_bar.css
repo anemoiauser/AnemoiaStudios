@@ -4,7 +4,6 @@
     display: block;
     width: fit-content;
     height: fit-content;
-    left: calc((100vw - 734px) / 2);
     bottom: 50px;
     padding: 8px;
 }

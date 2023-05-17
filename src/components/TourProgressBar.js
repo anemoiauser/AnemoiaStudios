@@ -1,18 +1,19 @@
 import  React  from 'react'
 import '../styles/tour_progress_bar.css'
 
-function TourProgressBar({progress, manualSetProgress}) {
+function TourProgressBar({progress, manualSetProgress, progressBarRef, left}) {
     return (
-        <div className='tour-progress-bar-main' draggable={false}>
-            {/* loop for 9 times to generate progress bar */}
-            {[...Array(9)].map((_, i)=>{
+        <div className='tour-progress-bar-main' draggable={false}
+            ref={progressBarRef} style={{left: `${left}px`}}>
+            {/* loop for n times to generate progress bar */}
+            {[...Array(progress.length)].map((_, i)=>{
                 return (
-                    <>
+                    <span key={`diamond-part-${i}`}>
                         <div className='diamond-outer' onClick={()=>{manualSetProgress(i)}}>
                             <div className='diamond-inner' style={{opacity: progress[i]}}></div>
                         </div>
-                        {i === 8 ? <></> : <div className='connector'></div>}
-                    </>)
+                        {i === progress.length -1  ? <></> : <div className='connector'></div>}
+                    </span>)
             })}
         </div>
     )

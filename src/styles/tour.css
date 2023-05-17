@@ -12,8 +12,7 @@
 .container .scene {
     display: block;
     position: absolute;
-    /* height: 100%; */
-    width: calc(100vw * 9);
+    height: 100%;
     top: 0;
     transform-origin: left;
     transition-duration: 3s;
