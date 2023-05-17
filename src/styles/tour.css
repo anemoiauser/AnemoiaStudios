@@ -32,3 +32,10 @@
 }
 
 .container .logo:hover {cursor: pointer;}
+
+@media screen and (max-width: 1100px) {
+    .container .logo {
+        top: 10px;
+        left: 10px;
+    }
+}
