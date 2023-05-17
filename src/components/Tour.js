@@ -48,14 +48,13 @@ function Tour({scene, frames}) {
     }, [scene, frames])
 
     useEffect(()=>{
-        if(translateX < 0) setTranslateX(0)
-        else if(translateX > maxTranslateX.current) setTranslateX(maxTranslateX.current)
         sceneRef.current.style.transform = `translateX(-${translateX}px)`
 
         // set progress bar diamond
         if(frameWidth.current) {
-            const progress_index = translateX === maxTranslateX.current ?
-                progress.length - 1 : Math.round(translateX / frameWidth.current)
+            const progress_index = Math.min((translateX === maxTranslateX.current ?
+                progress.length - 1 : Math.round(translateX / frameWidth.current)),
+                progress.length - 1)
             if(progress_index !== lastProgress) {
                 let progress_arr = [...progress]
                 progress_arr[progress_index] = 1
@@ -67,24 +66,31 @@ function Tour({scene, frames}) {
     // eslint-disable-next-line
     }, [translateX])
 
+    function realTranslateX(value) {
+        let real = value
+        if(value < 0) real = 0
+        else if(value > maxTranslateX.current) real = maxTranslateX.current
+        return real
+    }
+
     function updateWidthInfo() {
         // scene
         frameWidth.current = sceneRef.current.offsetWidth / frames
         maxTranslateX.current = 
             sceneRef.current.offsetWidth - containerRef.current.offsetWidth
-        setTranslateX(maxTranslateX.current / 2)
+        setTranslateX(realTranslateX(maxTranslateX.current / 2))
 
         // progress bar
         setProgressBarLeft((containerRef.current.offsetWidth - progressBarRef.current.offsetWidth) / 2)
     }
 
     function scrollImage(event) {
-        setTranslateX(translateX + event.deltaY)
+        setTranslateX(realTranslateX(translateX + event.deltaY))
     }
 
     function onMouseMove(event) {
         if(mouseDown) {
-            setTranslateX(translateX + (mouseX - event.pageX))
+            setTranslateX(realTranslateX(translateX + (mouseX - event.pageX)))
         }
         setMouseX(event.pageX)
     }
@@ -93,7 +99,7 @@ function Tour({scene, frames}) {
         const container_width = containerRef.current.offsetWidth
         let left = p * frameWidth.current
         left += (frameWidth.current - container_width) / 2
-        setTranslateX(left)
+        setTranslateX(realTranslateX(left))
     }
 
     return (
