@@ -37,3 +37,32 @@
 .home .slogan .sub {
     margin-left: 10px;
 }
+
+.home .music-panel {
+    position: absolute;
+    display: block;
+    left: 0;
+    bottom: 0;
+    background-color: rgb(80, 178, 179);
+    border-top-right-radius: 15px;
+    padding: 10px;
+    transform: translateX(calc(-100% + 50px));
+    transition-duration: .5s;
+}
+.home .music-panel span {
+    width: fit-content;
+    height: 30px;
+    line-height: 30px;
+    display: inline-block;
+}
+.home .play-music-icon {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    margin-bottom: -10px;
+}
+.home .music-panel:hover {
+    cursor: pointer;
+    transform: unset;
+}

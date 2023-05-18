@@ -1,8 +1,9 @@
 import  React, { useEffect } from 'react'
 import '../styles/home.css'
 import AnemoiaLogo from '../blob/anemoia_logo.png'
+import { PauseFill, PlayFill } from 'react-bootstrap-icons';
 
-function Home() {
+function Home({playBGM, setPlayBGM}) {
     
     useEffect(()=>{
         document.title = 'Anemoia Studios New Web';
@@ -15,6 +16,14 @@ function Home() {
             <div className='slogan'>
                 <span className='title'>Anemoia Studios</span>
                 <span className='sub'>"We are the ones, We've been waiting for."</span>
+            </div>
+            <div className='music-panel' onClick={()=>setPlayBGM(!playBGM)}>
+                <span>Enjoy our theme song here!</span>
+                {
+                    playBGM ? 
+                    <PauseFill className='play-music-icon' /> :
+                    <PlayFill className='play-music-icon' /> 
+                }
             </div>
         </div>
     )
