@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes} from "react-router-dom";
 import Home from "./Home";
 import Error from "./Error";
 import Menu from "./Menu";
+import Design from "./Design";
 import AboutUs from "./AboutUs";
 import Tour from "./Tour";
 import Contact from "./Contact";
@@ -48,6 +49,7 @@ function App() {
             <Menu />
             <Routes>
                 <Route path="/" element={<Home playBGM={playBGM} setPlayBGM={setPlayBGM} />} />
+                <Route path="/design" element={<Design />} />
                 <Route path="/about" element={<AboutUs />} />
                 <Route path="/contact" element={<Contact />}/>
                 <Route path="/tour">
