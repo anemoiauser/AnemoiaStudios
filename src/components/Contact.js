@@ -3,7 +3,7 @@ import '../styles/contact_us.css'
 import AnemoiaLogo from '../blob/anemoia_logo.png'
 import { Link } from 'react-router-dom';
 
-function Contact({scene}){
+function Contact(){
 
     useEffect(() => {
         document.title = "Anemoia Studios | Contact Us";
@@ -14,10 +14,6 @@ function Contact({scene}){
 
     const slideTimeOut = useRef()
     const slideInterval = useRef()
-
-    const logos = useRef({
-        studio: AnemoiaLogo
-    })
 
     function scrollImage(event) {
         if(slideInterval.current) clearInterval(slideInterval.current)
@@ -43,21 +39,34 @@ function Contact({scene}){
     return (
         <section>
             <div className='header-container' onWheel={scrollImage}>
-                <Link to='/'><img className='logo' src={logos.AnemoiaLogo} alt='anemoia-studios-logo'/></Link>
+                <Link to='/'><img className='logo' src={AnemoiaLogo} alt='anemoia-studios-logo'/></Link>
             </div>
 
             <div className='content-container'>
                 <h1>"We've been the ones we've been waiting for"</h1>
                 <div className='contact'>
                     <p>501 St #900, Oakland, CA 94612</p>
-                    <a href='tel:92101-3505'>92101-3505</a>
+                    <a href='tel:92101-3505'>92101-3505</a> 
                 </div>
             </div>
             
             <div className='form-container'>
-               <form method='get' id='contact'>
-                <p>For any general enquiries, suggestions and feedback, feel free to contact us via the following channels.</p>
-                <button><a href='mailto:anemoia@anemoiastudios.com'>Send</a></button>
+                <h2>For any general enquiries, suggestions and feedback, feel free to contact us via the following channels.</h2>
+                <form method='get' id='contact'>
+                
+                <div className='input-container'>
+                    {/* <label for="fullName">Name</label> */}
+                    <input type='text' name="fullName" placeholder="Name" />
+                    {/* <label for="email">Email Address</label> */}
+                    <input type='email' name="email" placeholder="Email" /><br/>
+                    {/* <label for="subject">Subject</label>   */}
+                    <input type='text' name="subject" placeholder="Subject" /><br/>
+                    {/* <label for="message">Message</label> */}
+                    <textarea name="message" placeholder='Write your message...'/><br/>
+                    <button>Send</button>
+                </div>
+
+                
             </form>
             </div>
             
