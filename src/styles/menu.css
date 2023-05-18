@@ -36,6 +36,10 @@
     width: 30px;
     height: 30px;
 }
+.menu-main .menu-items::-webkit-scrollbar {width: 7px;}
+.menu-main .menu-items::-webkit-scrollbar-track {opacity: 0;}
+.menu-main .menu-items::-webkit-scrollbar-thumb {border-radius: 5px; background-color: rgb(200, 200, 200);}
+.menu-main .menu-items::-webkit-scrollbar-thumb:hover {background-color: rgb(170, 170, 170);}
 .menu-main .close:hover {cursor: pointer;}
 
 .menu-main .menu-items {
