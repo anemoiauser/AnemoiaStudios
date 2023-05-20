@@ -84,7 +84,7 @@ function Contact(){
                     <label for="subject">Subject:<br/>  
                     <input type='text' name="subject" placeholder="Subject" value={subject} onChange={handleSubject}/></label>
                     <label for="message">Message:<br/>
-                    <textarea name="message" rows="2" cols="25" placeholder='Write your message...' value={message} onChange={handleMessage}/></label>
+                    <textarea name="message" rows="2" cols="22" placeholder='Write your message...' value={message} onChange={handleMessage}/></label>
                     <button type='submit'>Send</button>
                 </div>
 
