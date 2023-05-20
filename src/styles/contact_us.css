@@ -35,6 +35,11 @@ button,
   text-decoration: none;
 }
 
+label {
+  font-size: 0.9rem;
+  margin: 1em 0.5em;
+}
+
 input,
 textarea {
   background-color: initial;
