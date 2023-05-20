@@ -1,4 +1,4 @@
-import { React, useEffect } from 'react'
+import  React, { useEffect } from 'react'
 import '../styles/home.css'
 import AnemoiaLogo from '../blob/anemoia_logo.png'
 
