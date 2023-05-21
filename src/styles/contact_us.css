@@ -7,7 +7,7 @@ body {
 section {
   display: grid;
   justify-items: center;
-  grid-template-rows: 135px 250px 1fr;
+  grid-template-rows: 140px 450px 1fr;
 }
 
 h1 {
@@ -19,14 +19,16 @@ h1 {
 button {
   font-size: inherit;
   font-weight: 700;
-  background-color: inherit;
-  border: 1px solid #fff1e6;
+  background-color: #fff1e6;
+  color: #516b7b;
+  border: 1px solid #516b7b;
   border-radius: 30px;
   padding: 1em 2em;
   margin-top: 1em;
+  text-decoration: none;
+  cursor: pointer;
 }
 
-button,
 .content-container a {
   color: #fff1e6;
   text-decoration: none;
@@ -51,6 +53,8 @@ textarea {
 input::placeholder,
 textarea::placeholder {
   font: inherit;
+  font-weight: 700;
+  font-size: 1rem;
   color: #fff1e6;
 }
 
@@ -58,12 +62,12 @@ textarea::placeholder {
   margin: 1em 0;
 }
 
-.content-container {
+.content-container h2, .content-container a { 
   font-weight: 700;
-  font-size: 1.15rem;
+  font-size: 1.2rem;
 }
 
-.form-container h2 {
+.content-container p {
   font-size: 1rem;
   font-weight: 400;
 }
@@ -89,9 +93,15 @@ textarea::placeholder {
 }
 
 /* Media Queries */
+@media (min-width: 375px) {
+  section {
+    grid-template-rows: 140px 390px 1fr;;
+  }
+}
+
 @media (min-width: 425px) {
   section {
-    grid-template-rows: 135px 200px 1fr;
+    grid-template-rows: 140px 315px 1fr;
   }
 }
 
@@ -101,7 +111,7 @@ textarea::placeholder {
   }
 
   section {
-    grid-template-rows: 150px 225px 1fr;
+    grid-template-rows: 140px 340px 1fr;
   }
 
   .content-container, .form-container {
@@ -111,7 +121,7 @@ textarea::placeholder {
 
 @media (min-width: 1024px) {
   section {
-    grid-template-rows: 160px 300px 1fr;
+    grid-template-rows: 140px 400px 1fr;
     justify-items: center;
     align-items: center;
   }

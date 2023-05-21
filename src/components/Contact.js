@@ -67,17 +67,16 @@ function Contact(){
             <div className='content-container'>
                 <h1>"We've been the ones we've been waiting for"</h1>
                 <div className='contact'>
-                    <p>501 St #900, Oakland, CA 94612</p>
+                    <h2 href="#">501 St #900, Oakland, CA 94612</h2>
                     <a href='tel:92101-3505'>92101-3505</a> 
                 </div>
+                <p>For any general enquiries, suggestions and feedback, feel free to contact us via the following channels.
+                    Alternatively, if you want to enquire about our projects, please click here.
+                </p>
             </div>
             
             <div className='form-container'>
-                <h2>For any general enquiries, suggestions and feedback, feel free to contact us via the following channels.
-                    Alternatively, if you want to enquire about our projects, please click here.
-                </h2>
                 <form method='get' ref={form} id='contact' onSubmit={handleSubmit}>
-                
                 <div className='input-container'>
                     <label for="fullName">Name:<br/>
                     <input type='text' name="fullName" placeholder="Name" value={name} onChange={handleName}/></label>
