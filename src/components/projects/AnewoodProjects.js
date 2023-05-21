@@ -61,22 +61,22 @@ function AnewoodProjects() {
                 <br></br><br></br>Thank You For Touring with Us. Be Sure to Help Our Fundraising Efforts by Clicking “Gift Action”. Anemoia Inc., is 
                 Currently Crowdfunding on “ifundwomen.com”. To See This Design Become a Reality, Anemoia Needs YOUR Help! Please Take The Time to
                 Make a Contribution to Anemoia’s Campaign to Help Build Our Studio Home.<br></br><br></br>Please browse our Projects...</div></div>
-                <div className="cell"><Link to='/AnewoodProjectPodcast'><span>Podcast Studio</span><img alt='Podcast Studio' src={Podcast1} /></Link></div>
-                <div className="cell"><Link to='/AnewoodProjectPodcast'><span>Podcast Studio</span><img alt='Podcast Studio' src={Podcast2} /></Link></div>
-                <div className="cell"><Link to='/AnewoodProjectLounge'><span>Corporate Lounge</span><img alt='Corporate Lounge' src={Lounge1} /></Link></div>
-                <div className="cell"><Link to='/AnewoodProjectLounge'><span>Corporate Lounge</span><img alt='Corporate Lounge' src={Lounge2} /></Link></div>
-                <div className="cell"><Link to='/AnewoodProjectLounge'><span>Corporate Lounge</span><img alt='Corporate Lounge' src={Lounge3} /></Link></div>
-                <div className="cell"><Link to='/AnewoodProjectLobby'><span>Corporate Lobby</span><img alt='Corporate Lobby' src={Lobby1} /></Link></div>
-                <div className="cell"><Link to='/AnewoodProjectLobby'><span>Corporate Lobby</span><img alt='Corporate Lobby' src={Lobby2} /></Link></div>
-                <div className="cell"><Link to='/AnewoodProjectLobby'><span>Corporate Lobby</span><img alt='Corporate Lobby' src={Lobby3} /></Link></div>
-                <div className="cell"><Link to='/AnewoodProjectCafe'><span>Cafeteria</span><img alt='Cafeteria' src={Cafe} /></Link></div>
-                <div className="cell"><Link to='/AnewoodProjectSuite'><span>Warming Suite</span><img alt='Warming Suite' src={Suite1} /></Link></div>
-                <div className="cell"><Link to='/AnewoodProjectSuite'><span>Warming Suite</span><img alt='Warming Suite' src={Suite2} /></Link></div>
-                <div className="cell"><Link to='/AnewoodProjectTheatre'><span>Theatre</span><img alt='Theatre' src={Theatre1} /></Link></div>
-                <div className="cell"><Link to='/AnewoodProjectTheatre'><span>Theatre</span><img alt='Theatre' src={Theatre2} /></Link></div>
-                <div className="cell"><Link to='/AnewoodProjectTheatre'><span>Theatre</span><img alt='Theatre' src={Theatre3} /></Link></div>
-                <div className="cell"><Link to='/AnewoodProjectWarehouse'><span>Warehouse</span><img alt='Warehouse' src={warehouse1} /></Link></div>
-                <div className="cell"><Link to='/AnewoodProjectWarehouse'><span>Warehouse</span><img alt='Warehouse' src={warehouse2} /></Link></div>
+                <div className="cell"><Link to='/projects/AnewoodProjectPodcast'><span>Podcast Studio</span><img alt='Podcast Studio' src={Podcast1} /></Link></div>
+                <div className="cell"><Link to='/projects/AnewoodProjectPodcast'><span>Podcast Studio</span><img alt='Podcast Studio' src={Podcast2} /></Link></div>
+                <div className="cell"><Link to='/projects/AnewoodProjectLounge'><span>Corporate Lounge</span><img alt='Corporate Lounge' src={Lounge1} /></Link></div>
+                <div className="cell"><Link to='/projects/AnewoodProjectLounge'><span>Corporate Lounge</span><img alt='Corporate Lounge' src={Lounge2} /></Link></div>
+                <div className="cell"><Link to='/projects/AnewoodProjectLounge'><span>Corporate Lounge</span><img alt='Corporate Lounge' src={Lounge3} /></Link></div>
+                <div className="cell"><Link to='/projects/AnewoodProjectLobby'><span>Corporate Lobby</span><img alt='Corporate Lobby' src={Lobby1} /></Link></div>
+                <div className="cell"><Link to='/projects/AnewoodProjectLobby'><span>Corporate Lobby</span><img alt='Corporate Lobby' src={Lobby2} /></Link></div>
+                <div className="cell"><Link to='/projects/AnewoodProjectLobby'><span>Corporate Lobby</span><img alt='Corporate Lobby' src={Lobby3} /></Link></div>
+                <div className="cell"><Link to='/projects/AnewoodProjectCafe'><span>Cafeteria</span><img alt='Cafeteria' src={Cafe} /></Link></div>
+                <div className="cell"><Link to='/projects/AnewoodProjectSuite'><span>Warming Suite</span><img alt='Warming Suite' src={Suite1} /></Link></div>
+                <div className="cell"><Link to='/projects/AnewoodProjectSuite'><span>Warming Suite</span><img alt='Warming Suite' src={Suite2} /></Link></div>
+                <div className="cell"><Link to='/projects/AnewoodProjectTheatre'><span>Theatre</span><img alt='Theatre' src={Theatre1} /></Link></div>
+                <div className="cell"><Link to='/projects/AnewoodProjectTheatre'><span>Theatre</span><img alt='Theatre' src={Theatre2} /></Link></div>
+                <div className="cell"><Link to='/projects/AnewoodProjectTheatre'><span>Theatre</span><img alt='Theatre' src={Theatre3} /></Link></div>
+                <div className="cell"><Link to='/projects/AnewoodProjectWarehouse'><span>Warehouse</span><img alt='Warehouse' src={warehouse1} /></Link></div>
+                <div className="cell"><Link to='/projects/AnewoodProjectWarehouse'><span>Warehouse</span><img alt='Warehouse' src={warehouse2} /></Link></div>
                 
 
  </Flickity> 
