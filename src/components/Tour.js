@@ -103,11 +103,17 @@ function Tour({scene, frames}) {
         setTranslateX(realTranslateX(left))
     }
 
+    function touchStart(e) {
+        const pageX = e.changedTouches[0].pageX
+        setMouseX(pageX)
+        setMouseDown(true)
+    }
+
     return (
         <div className='container' ref={containerRef} onWheel={scrollImage}
                 onMouseDown={()=>setMouseDown(true)} onMouseUp={()=>setMouseDown(false)} onMouseMove={onMouseMove}
                 onMouseLeave={()=>setMouseDown(false)} 
-                onTouchStart={()=>setMouseDown(true)} onTouchEnd={()=>setMouseDown(false)} onTouchMove={e=>onMouseMove(e, true)}>
+                onTouchStart={touchStart} onTouchEnd={()=>setMouseDown(false)} onTouchMove={e=>onMouseMove(e, true)}>
             <TourProjectTitles scene_titles={sceneTitles} progress_index={lastProgress} />
             <TourProgressBar progress={progress} manualSetProgress={manualSetProgress}
                 progressBarRef={progressBarRef} left={progressBarLeft} />
