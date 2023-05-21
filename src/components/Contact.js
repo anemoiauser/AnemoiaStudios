@@ -73,7 +73,9 @@ function Contact(){
             </div>
             
             <div className='form-container'>
-                <h2>For any general enquiries, suggestions and feedback, feel free to contact us via the following channels.</h2>
+                <h2>For any general enquiries, suggestions and feedback, feel free to contact us via the following channels.
+                    Alternatively, if you want to enquire about our projects, please click here.
+                </h2>
                 <form method='get' ref={form} id='contact' onSubmit={handleSubmit}>
                 
                 <div className='input-container'>
@@ -84,7 +86,7 @@ function Contact(){
                     <label for="subject">Subject:<br/>  
                     <input type='text' name="subject" placeholder="Subject" value={subject} onChange={handleSubject}/></label>
                     <label for="message">Message:<br/>
-                    <textarea name="message" rows="2" cols="22" placeholder='Write your message...' value={message} onChange={handleMessage}/></label>
+                    <textarea name="message" rows="5" cols="22" placeholder='Write your message...' value={message} onChange={handleMessage}/></label>
                     <button type='submit'>Send</button>
                 </div>
 
