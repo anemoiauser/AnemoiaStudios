@@ -37,7 +37,7 @@ function Menu() {
                     </> : <></>
                 }
                 </div>
-                <Link to='/design' className='menu-item' onClick={()=>setMenuStatus(false)}>Designs</Link>
+                <Link to='/design' className='menu-item' onClick={()=>setMenuStatus(false)}>Website Disclaimer</Link>
                 <Link to='/about' className='menu-item' onClick={()=>setMenuStatus(false)}>About Us</Link>
                 <Link to='/contact' className='menu-item' onClick={()=>setMenuStatus(false)}>Contact Us</Link>
             </div>

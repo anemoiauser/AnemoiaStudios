@@ -7,7 +7,7 @@ function Design() {
     const design_ref = useRef()
     
     useEffect(()=>{
-        document.title = 'Anemoia Studios New Web | Design';
+        document.title = 'Anemoia Studios New Web | Website Disclaimer';
     // eslint-disable-next-line
     }, [])
 
