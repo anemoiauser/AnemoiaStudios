@@ -7,7 +7,7 @@ function Design() {
     const design_ref = useRef()
     
     useEffect(()=>{
-        document.title = 'Anemoia Studios New Web | Design';
+        document.title = 'Anemoia Studios New Web | Website Disclaimer';
     // eslint-disable-next-line
     }, [])
 
@@ -59,7 +59,7 @@ function Design() {
                 </p>
                 </div>     
             </div>
-            <div className='design-block' style={{width : '25%'}}>
+            <div className='design-block2'>
                 <p className = 'p4'>
                      <br /><br /><br /><br /><br />
                      <b>Avijit Verma</b><br /><br />

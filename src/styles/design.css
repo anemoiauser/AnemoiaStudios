@@ -30,7 +30,19 @@ body {
     white-space: normal;
     
 }
-
+.design-main .design-block2 {
+    width: 25%;
+    margin-top: 1vh;
+    margin-left: 1vh;
+    overflow: visible;
+    display: inline-block;
+    transition-duration: .3s;
+    vertical-align: top;
+    overflow-y: auto;
+    word-wrap: normal;
+    white-space: normal;
+    
+}
 .design-main .main-img {
     width: 15vh;
     height: 9vh;
@@ -75,6 +87,16 @@ body {
     }
     .design-main .p4{
         display: inline-block;
+    }
+    .design-main .design-block {
+        width: 90%;
+        display: block;
+    }.design-main .design-block2 {
+        width: 90%;
+        
+    }
+    .design-block2 .p4{
+        display: block;
     }
 } 
 
