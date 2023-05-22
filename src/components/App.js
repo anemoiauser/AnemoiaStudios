@@ -1,5 +1,6 @@
 import  React, { useEffect, useRef, useState }  from "react";
 import { BrowserRouter, Route, Routes} from "react-router-dom";
+import ReactGA from 'react-ga';
 import Home from "./Home";
 import Error from "./Error";
 import Menu from "./Menu";
@@ -35,6 +36,10 @@ import AnewoodProjectTheatre from "./projects/AnewoodProjectTheatre";
 import AnewoodProjectWarehouse from "./projects/AnewoodProjectWarehouse";
 import AnemoiaThemeSong from '../blob/Anemoia Theme Song Instrumentals.wav'
 
+const TRACKING_ID = ""; // TRACKING_ID
+
+ReactGA.initialize(TRACKING_ID);
+
 function App() {
 
     const bgm = useRef()
@@ -45,6 +50,10 @@ function App() {
         bgm.current.loop = true
     }, [])
     
+    useEffect(() => {
+        ReactGA.pageview(window.location.pathname + window.location.search);
+      }, []);
+      
     useEffect(()=>{
         if(playBGM) bgm.current.play()
         else bgm.current.pause()
