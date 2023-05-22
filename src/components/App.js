@@ -26,7 +26,13 @@ import AnemoiaProjectFilmStudio2 from "./projects/AnemoiaProjectFilmStudio2";
 import AnemoiaProjectFilmStudio4 from "./projects/AnemoiaProjectFilmStudio4";
 import AnemoiaProjectFilmStudio5 from "./projects/AnemoiaProjectFilmStudio5";
 import AnemoiaProjectFilmStudio6 from "./projects/AnemoiaProjectFilmStudio6";
-
+import AnewoodProjectPodcast from "./projects/AnewoodProjectPodcast";
+import AnewoodProjectLounge from "./projects/AnewoodProjectLounge";
+import AnewoodProjectLobby from "./projects/AnewoodProjectLobby";
+import AnewoodProjectCafe from "./projects/AnewoodProjectCafe";
+import AnewoodProjectSuite from "./projects/AnewoodProjectSuite";
+import AnewoodProjectTheatre from "./projects/AnewoodProjectTheatre";
+import AnewoodProjectWarehouse from "./projects/AnewoodProjectWarehouse";
 import AnemoiaThemeSong from '../blob/Anemoia Theme Song Instrumentals.wav'
 
 function App() {
@@ -77,7 +83,13 @@ function App() {
                 <Route path="/projects/BroadcastingStudio1" element={<AnemoiaProjectBroadcastingStudio1 />} />
                 <Route path="/projects/MusicStudio1" element={<AnemoiaProjectMusicStudio1 />} />
                 <Route path="/projects/MusicStudio4" element={<AnemoiaProjectMusicStudio4 />} />
-
+                <Route path="/projects/AnewoodProjectPodcast" element={<AnewoodProjectPodcast />} />
+                <Route path="/projects/AnewoodProjectLounge" element={<AnewoodProjectLounge />} />
+                <Route path="/projects/AnewoodProjectLobby" element={<AnewoodProjectLobby />} />
+                <Route path="/projects/AnewoodProjectCafe" element={<AnewoodProjectCafe />} />
+                <Route path="/projects/AnewoodProjectSuite" element={<AnewoodProjectSuite />} />
+                <Route path="/projects/AnewoodProjectTheatre" element={<AnewoodProjectTheatre />} />
+                <Route path="/projects/AnewoodProjectWarehouse" element={<AnewoodProjectWarehouse />} />
                 <Route path="*" element={<Error />} />
             </Routes>
 
