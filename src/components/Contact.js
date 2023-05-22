@@ -31,10 +31,32 @@ function Contact(){
         }, Math.abs(event.deltaY));
     }
 
-    /* const contactForm = document.getElementById("contact");
-    contactForm.addEventListener('submit', (e) => {
+    // Form Functions
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [subject, setSubject] = useState('');
+    const [message, setMessage] = useState('');
+    const form = useRef();
+
+    const handleName = (e) => {
+        setName(e.target.value);
+    }
+
+    const handleEmail = (e) => {
+        setEmail(e.target.value);
+    }
+
+    const handleSubject = (e) => {
+        setSubject(e.target.value);
+    }
+
+    const handleMessage = (e) => {
+        setMessage(e.target.value);
+    }
+
+    const handleSubmit = (e) => {
         e.preventDefault()
-    }) */
+    }
 
     return (
         <section>
@@ -45,25 +67,26 @@ function Contact(){
             <div className='content-container'>
                 <h1>"We've been the ones we've been waiting for"</h1>
                 <div className='contact'>
-                    <p>501 St #900, Oakland, CA 94612</p>
+                    <h2 href="#">501 St #900, Oakland, CA 94612</h2>
                     <a href='tel:92101-3505'>92101-3505</a> 
                 </div>
+                <p>For any general enquiries, suggestions and feedback, feel free to contact us via the following channels.
+                    Alternatively, if you want to enquire about our projects, please click here.
+                </p>
             </div>
             
             <div className='form-container'>
-                <h2>For any general enquiries, suggestions and feedback, feel free to contact us via the following channels.</h2>
-                <form method='get' id='contact'>
-                
+                <form method='get' ref={form} id='contact' onSubmit={handleSubmit}>
                 <div className='input-container'>
-                    {/* <label for="fullName">Name</label> */}
-                    <input type='text' name="fullName" placeholder="Name" />
-                    {/* <label for="email">Email Address</label> */}
-                    <input type='email' name="email" placeholder="Email" /><br/>
-                    {/* <label for="subject">Subject</label>   */}
-                    <input type='text' name="subject" placeholder="Subject" /><br/>
-                    {/* <label for="message">Message</label> */}
-                    <textarea name="message" placeholder='Write your message...'/><br/>
-                    <button>Send</button>
+                    <label for="fullName">Name:<br/>
+                    <input type='text' name="fullName" placeholder="Name" value={name} onChange={handleName}/></label>
+                    <label for="email">Email Address:<br/>
+                    <input type='email' name="email" placeholder="Email" value={email} onChange={handleEmail}/></label>
+                    <label for="subject">Subject:<br/>  
+                    <input type='text' name="subject" placeholder="Subject" value={subject} onChange={handleSubject}/></label>
+                    <label for="message">Message:<br/>
+                    <textarea name="message" rows="5" cols="22" placeholder='Write your message...' value={message} onChange={handleMessage}/></label>
+                    <button type='submit'>Send</button>
                 </div>
 
                 
@@ -73,18 +96,4 @@ function Contact(){
         </section>
     );
 }
-
-/*
-<form method='get'>
-<label for="fullName">Name</label>
-<input type='text' name="fullName" placeholder="Name" />
-<label for="email">Email Address</label>
-<input type='email' name="email" placeholder="Email" />
-<label for="subject">Subject</label>  
-<input type='text' name="subject" placeholder="Subject" />
-<label for="message">Message</label>
-<textarea name="message" placeholder='Write your message...'/>
-<button>Send</button>
-</form>*/
-
 export default Contact;

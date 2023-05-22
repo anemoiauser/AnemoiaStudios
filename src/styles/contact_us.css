@@ -1,16 +1,13 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
-
 body {
   background-color: rgb(128, 215, 207);
   color: #fff1e6;
   font-size: 1rem;
-  font-family: "Open Sans", sans-serif;
 }
 
 section {
   display: grid;
   justify-items: center;
-  grid-template-rows: 120px minmax(150px, 300px) 1fr;
+  grid-template-rows: 140px 450px 1fr;
 }
 
 h1 {
@@ -22,17 +19,26 @@ h1 {
 button {
   font-size: inherit;
   font-weight: 700;
-  background-color: inherit;
-  border: 1px solid #fff1e6;
+  background-color: #fff1e6;
+  color: #516b7b;
+  border: 1px solid #516b7b;
   border-radius: 30px;
   padding: 1em 2em;
   margin-top: 1em;
+  text-decoration: none;
+  cursor: pointer;
 }
 
-button,
 .content-container a {
   color: #fff1e6;
   text-decoration: none;
+}
+
+label {
+  font-size: 0.9rem;
+  margin: 1em auto;
+  width: 100%;
+  overflow: hidden;
 }
 
 input,
@@ -40,12 +46,15 @@ textarea {
   background-color: initial;
   border: none;
   border-bottom: 1px solid #516b7b;
-  padding: 1em 1em;
+  padding: 1em 2em;
+  width: -webkit-fill-available;
 }
 
 input::placeholder,
 textarea::placeholder {
   font: inherit;
+  font-weight: 700;
+  font-size: 1rem;
   color: #fff1e6;
 }
 
@@ -53,25 +62,25 @@ textarea::placeholder {
   margin: 1em 0;
 }
 
-.content-container {
+.content-container h2, .content-container a { 
   font-weight: 700;
-  font-size: 1.15rem;
+  font-size: 1.2rem;
 }
 
-.form-container h2 {
+.content-container p {
   font-size: 1rem;
   font-weight: 400;
 }
 
 .form-container,
 .content-container {
-  width: 90%;
+  width: 85%;
 }
 
 .input-container {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .header-container .logo {
@@ -83,23 +92,36 @@ textarea::placeholder {
   z-index: 10;
 }
 
+/* Media Queries */
+@media (min-width: 375px) {
+  section {
+    grid-template-rows: 140px 390px 1fr;;
+  }
+}
 
+@media (min-width: 425px) {
+  section {
+    grid-template-rows: 140px 315px 1fr;
+  }
+}
 
 @media (min-width: 768px) {
   h1 {
     font-size: 2.25rem;
   }
 
-  .header-container .logo {
-    width: 20vh;
-    height: 15vh;
-    top: 30px;
-    left: 30px;
+  section {
+    grid-template-rows: 140px 340px 1fr;
+  }
+
+  .content-container, .form-container {
+    width: 70%;
   }
 }
 
 @media (min-width: 1024px) {
   section {
+    grid-template-rows: 140px 400px 1fr;
     justify-items: center;
     align-items: center;
   }
@@ -109,7 +131,7 @@ textarea::placeholder {
   }
 
   .content-container {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
 
   .form-container p {
