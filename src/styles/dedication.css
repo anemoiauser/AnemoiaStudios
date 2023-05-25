@@ -1,0 +1,163 @@
+body {
+    background-color: rgb(128, 215, 207);
+}
+
+.dedication-main {
+    display: block;
+    white-space: nowrap;
+    height: 90vh;
+    width: 85vw;
+    overflow-y: auto;
+    position: absolute;
+    top: 5vh;
+    left: 5vw;
+}
+.dedication-main::-webkit-scrollbar {height: 8px;}
+.dedication-main::-webkit-scrollbar-track {background: rgba(0, 0, 0, 0);}
+.dedication-main::-webkit-scrollbar-thumb {background: rgb(180, 180, 180); border-radius: 5px;}
+.dedication-main::-webkit-scrollbar-thumb:hover {background: rgb(150, 150, 150);}
+
+.dedication-main .dedication{
+    width: fit-content;
+   
+    overflow: visible;
+    display: block;
+    padding: 15px;
+    transition-duration: .3s;
+    position: relative;
+    overflow-y: auto;
+    word-wrap: normal;
+    white-space: normal;
+}
+.dedication-main .dedication-block::-webkit-scrollbar {width: 10px;}
+.dedication-main .dedication-block::-webkit-scrollbar-track {background: rgba(0, 0, 0, 0);}
+.dedication-main .dedication-block::-webkit-scrollbar-thumb {background: rgb(128, 215, 207); border-radius: 5px;}
+.dedication-main .dedication-block::-webkit-scrollbar-thumb:hover {background: rgb(69, 154, 155);}
+.dedication-main .dedication-block:hover {
+    background-color: rgb(80, 178, 179);
+}
+
+.dedication-main .about{
+    display: block;
+    padding-bottom: 5vh;
+
+}
+
+.dedication-main .about .main-img {
+    width: 15vh;
+    height: 9vh;
+    position: sticky;
+    padding-left: 0vh;
+    padding-top: 0vh;
+    
+}
+
+
+
+.dedication-main .about .summary {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 30px;
+}
+
+.intern-container {
+    display: block;
+
+    padding: 5px;
+   
+}
+
+.team-container {
+    display: block;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-top: 1px solid black;
+    
+    padding: 5px;
+   
+}
+.team-container:last-child{
+    display: block;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 5px;
+   
+}
+
+.team-container .title{
+font-size: 30px;
+display:block;
+text-align: center;
+height: 15%;
+padding-top: 1vh;
+}
+.intern-container .intern {
+    height: 70%;
+    width: 30%;
+    display: inline-block;
+    text-align: center;
+}
+
+
+
+
+
+@media only screen and (max-width: 1024px) {
+   .intern {
+        height: 70%;
+        width: fit-content;
+        display: block;
+        text-align: center;
+    }
+
+    .intern-container  {
+        display: inline;
+        height: 60%;
+        width: fit-content;
+       
+    }
+    .intern span {
+        margin-left: 20px;
+        display: block;
+        max-width: 80%;
+        
+    }
+    
+} 
+
+@media only screen and (min-width: 1024px) {
+    .intern {
+        height: 100%;
+        display: inline-block;
+        width: 35%;
+        align-items: center;
+        text-align: center;
+    }
+    .intern-container  {
+        display: block;
+        height: 60%;
+        width: 100%;
+        align-items: center;
+    }
+    
+    .intern span {
+        display: block;
+    }
+  
+} 
+
+
+
+
+.intern-container  .photo {
+
+    align-items: center;
+}
+
+
+.intern .name {
+    font-size: large;
+    font-weight: bold;
+}
