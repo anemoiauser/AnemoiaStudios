@@ -69,19 +69,19 @@ body {
 
 .team-container {
     display: block;
-    border-left: 1px solid black;
-    border-right: 1px solid black;
-    border-top: 1px solid black;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    border-top: 1px solid white;
     
     padding: 5px;
    
 }
 .team-container:last-child{
     display: block;
-    border-left: 1px solid black;
-    border-right: 1px solid black;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
     padding: 5px;
    
 }
