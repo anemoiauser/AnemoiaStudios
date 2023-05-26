@@ -3,6 +3,8 @@ import '../styles/contact_us.css'
 import AnemoiaLogo from '../blob/anemoia_logo.png'
 import { Link, useNavigate } from 'react-router-dom';
 import emailjs from '@emailjs/browser';
+import { ToastContainer, toast } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
 
 function Contact(){
 
@@ -57,16 +59,21 @@ function Contact(){
     }
 
     const handleSubmit = (e) => {
-        e.preventDefault()
+        e.preventDefault();
 
         emailjs.sendForm('service_j5zfjq7','template_lovo2gw', form.current,'poSqMTD3SUmtfxsGh')
             .then((result) => {
                 console.log(result.text)
-                navigate('/');
+                toast.success("Thank you sending us this message. You will be redirected to the home page in a few seconds.",
+                {position:toast.POSITION.BOTTOM_CENTER});
+                setTimeout(() => {navigate('/')}, 9000);
             }, (error) => {
+                toast.error("Unexpected Error. Please check you have entered the correct information.",
+                {position:toast.POSITION.BOTTOM_CENTER})
                 console.log(error.text)
             });
     };
+
 
     return (
         <section>
@@ -97,6 +104,7 @@ function Contact(){
                     <label for="message">Message:<br/>
                     <textarea name="message" rows="5" cols="22" placeholder='Write your message...' value={message} onChange={handleMessage}/></label>
                     <button type='submit'>Send</button>
+                    <ToastContainer/>
                 </div>
 
                 
