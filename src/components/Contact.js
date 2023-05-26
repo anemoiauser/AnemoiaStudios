@@ -1,7 +1,8 @@
 import { React, useState, useEffect, useRef } from 'react';
 import '../styles/contact_us.css'
 import AnemoiaLogo from '../blob/anemoia_logo.png'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import emailjs from '@emailjs/browser';
 
 function Contact(){
 
@@ -37,6 +38,7 @@ function Contact(){
     const [subject, setSubject] = useState('');
     const [message, setMessage] = useState('');
     const form = useRef();
+    const navigate = useNavigate();
 
     const handleName = (e) => {
         setName(e.target.value);
@@ -56,7 +58,15 @@ function Contact(){
 
     const handleSubmit = (e) => {
         e.preventDefault()
-    }
+
+        emailjs.sendForm('service_j5zfjq7','template_lovo2gw', form.current,'poSqMTD3SUmtfxsGh')
+            .then((result) => {
+                console.log(result.text)
+                navigate('/');
+            }, (error) => {
+                console.log(error.text)
+            });
+    };
 
     return (
         <section>
@@ -71,7 +81,7 @@ function Contact(){
                     <a href='tel:92101-3505'>92101-3505</a> 
                 </div>
                 <p>For any general enquiries, suggestions and feedback, feel free to contact us via the following channels.
-                    Alternatively, if you want to enquire about our projects, please click here.
+                    Alternatively, if you want to enquire about our projects, please click <Link to='/projects/anemoia'>Anemoia</Link> or <Link to='/projects/anemoia'>Anewood</Link>.
                 </p>
             </div>
             
