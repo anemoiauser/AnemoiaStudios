@@ -35,6 +35,7 @@ import AnewoodProjectSuite from "./projects/AnewoodProjectSuite";
 import AnewoodProjectTheatre from "./projects/AnewoodProjectTheatre";
 import AnewoodProjectWarehouse from "./projects/AnewoodProjectWarehouse";
 import AnemoiaThemeSong from '../blob/Anemoia Theme Song Instrumentals.wav'
+import AnemoiaProjectWritersStudio6 from "./projects/AnemoiaProjectWritersStudio6";
 
 const TRACKING_ID = ""; // TRACKING_ID
 
@@ -92,6 +93,7 @@ function App() {
                 <Route path="/projects/BroadcastingStudio1" element={<AnemoiaProjectBroadcastingStudio1 />} />
                 <Route path="/projects/MusicStudio1" element={<AnemoiaProjectMusicStudio1 />} />
                 <Route path="/projects/MusicStudio4" element={<AnemoiaProjectMusicStudio4 />} />
+                <Route path="/projects/WritersStudio6" element={<AnemoiaProjectWritersStudio6 />} />
                 <Route path="/projects/AnewoodProjectPodcast" element={<AnewoodProjectPodcast />} />
                 <Route path="/projects/AnewoodProjectLounge" element={<AnewoodProjectLounge />} />
                 <Route path="/projects/AnewoodProjectLobby" element={<AnewoodProjectLobby />} />

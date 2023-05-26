@@ -36,24 +36,25 @@ body { font-family: sans-serif; margin: 0;}
 }
 
 .projects-back-button img {
-  width:3%;
+  width:35px;
   height: auto;
   font-size: 1.4vw;
   color: white;
   text-shadow: 2px 2px 4px lightgray;
   position: fixed;
-  top: 350px;
-  left: 200px;
+  top: 360px;
+  left: 210px;
 }
 
 .projects-back-button {
-  font-size: 1.4vw;
+  font-size: 15px;
   color: white;
   text-shadow: 2px 2px 4px lightgray;
   position: fixed;
-  top: 356px;
+  top: 366px;
   left: 260px;
   font-style: italic;
   font-weight: 700;
+  text-decoration: none;
 
 }
