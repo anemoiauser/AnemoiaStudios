@@ -114,7 +114,7 @@ function Tour({scene, frames}) {
                 onMouseDown={()=>setMouseDown(true)} onMouseUp={()=>setMouseDown(false)} onMouseMove={onMouseMove}
                 onMouseLeave={()=>setMouseDown(false)} 
                 onTouchStart={touchStart} onTouchEnd={()=>setMouseDown(false)} onTouchMove={e=>onMouseMove(e, true)}>
-            <TourProjectTitles scene_titles={sceneTitles} progress_index={lastProgress} />
+            <TourProjectTitles {...sceneTitles[lastProgress]} />
             <TourProgressBar progress={progress} manualSetProgress={manualSetProgress}
                 progressBarRef={progressBarRef} left={progressBarLeft} />
             <Link to='/'><img className='logo'  src={logos.current[scene]} alt='logo' /></Link>

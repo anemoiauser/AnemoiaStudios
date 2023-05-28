@@ -1,8 +1,9 @@
 import { React } from 'react'
 import '../styles/tour_project_titles.css'
+import { Link } from 'react-router-dom';
 
-function TourProjectTitles({scene_titles, progress_index}) {
-    return <div className='tour-project-title'>{scene_titles[progress_index]}</div>
+function TourProjectTitles({name, link}) {
+    return <Link className='tour-project-title' to={link}>{name}</Link>
 }
 
 export default TourProjectTitles;
