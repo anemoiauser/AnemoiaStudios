@@ -1,5 +1,5 @@
 import  { React, useEffect, useRef } from 'react'
-import { Link, useParams } from 'react-router-dom'
+import { Link, useNavigate, useParams } from 'react-router-dom'
 import '../../styles/anemoia_project.css'
 import AnemoiaLogo from '../../blob/anemoia_logo.png'
 import BackButton from  '../../blob/projects/bkbut.png'
@@ -8,6 +8,7 @@ import Error from '../Error'
 
 function SingleProject() {
     const { project, name } = useParams()
+    const navigate = useNavigate()
     const this_project = useRef(all_projects[project][name])
 
     useEffect(()=>{
@@ -25,10 +26,10 @@ function SingleProject() {
                     <span className='quote'>{this_project.current.quote}</span>:
                     <></>
                 }
-                <Link to={`/projects/${project}`} className='projects-back-button'>
+                <div onClick={()=>navigate(-1)} className='projects-back-button'>
                     <img alt='Projects back button' src={BackButton} />
                     Go Back
-                </Link>
+                </div>
                 {this_project.current.imgs.map((e, i) => {
                     return <img className='project-img' key={`project-img-${i}`} alt={this_project.title} src={e}/>
                 })}

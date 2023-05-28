@@ -58,3 +58,4 @@ body { font-family: sans-serif; margin: 0;}
   text-decoration: none;
 
 }
+.projects-back-button:hover {cursor: pointer;}
