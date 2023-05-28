@@ -23,8 +23,9 @@ button {
   color: #516b7b;
   border: 1px solid #516b7b;
   border-radius: 30px;
-  padding: 1em 2em;
+  padding: 1em 5em;
   margin-top: 1em;
+  align-self: center;
   text-decoration: none;
   cursor: pointer;
 }
@@ -114,6 +115,10 @@ textarea::placeholder {
     grid-template-rows: 140px 340px 1fr;
   }
 
+  button {
+    align-self: flex-start;
+  }
+
   .content-container, .form-container {
     width: 70%;
   }
@@ -136,5 +141,9 @@ textarea::placeholder {
 
   .form-container p {
     font-size: 1.5rem;
+  }
+
+  .content-container, .form-container {
+    width: 65%;
   }
 }

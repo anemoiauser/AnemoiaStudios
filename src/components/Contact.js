@@ -1,7 +1,10 @@
 import { React, useState, useEffect, useRef } from 'react';
 import '../styles/contact_us.css'
 import AnemoiaLogo from '../blob/anemoia_logo.png'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import emailjs from '@emailjs/browser';
+import { ToastContainer, toast } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
 
 function Contact(){
 
@@ -37,6 +40,7 @@ function Contact(){
     const [subject, setSubject] = useState('');
     const [message, setMessage] = useState('');
     const form = useRef();
+    const navigate = useNavigate();
 
     const handleName = (e) => {
         setName(e.target.value);
@@ -55,8 +59,21 @@ function Contact(){
     }
 
     const handleSubmit = (e) => {
-        e.preventDefault()
-    }
+        e.preventDefault();
+
+        emailjs.sendForm('service_j5zfjq7','template_lovo2gw', form.current,'poSqMTD3SUmtfxsGh')
+            .then((result) => {
+                console.log(result.text)
+                toast.success("Thank you sending us this message. You will be redirected to the home page in a few seconds.",
+                {position:toast.POSITION.BOTTOM_CENTER});
+                setTimeout(() => {navigate('/')}, 9000);
+            }, (error) => {
+                toast.error("Unexpected Error. Please check you have entered the correct information.",
+                {position:toast.POSITION.BOTTOM_CENTER})
+                console.log(error.text)
+            });
+    };
+
 
     return (
         <section>
@@ -71,7 +88,7 @@ function Contact(){
                     <a href='tel:92101-3505'>92101-3505</a> 
                 </div>
                 <p>For any general enquiries, suggestions and feedback, feel free to contact us via the following channels.
-                    Alternatively, if you want to enquire about our projects, please click here.
+                    Alternatively, if you want to enquire about our projects, please click <Link to='/projects/anemoia'>Anemoia</Link> or <Link to='/projects/anemoia'>Anewood</Link>.
                 </p>
             </div>
             
@@ -87,6 +104,7 @@ function Contact(){
                     <label for="message">Message:<br/>
                     <textarea name="message" rows="5" cols="22" placeholder='Write your message...' value={message} onChange={handleMessage}/></label>
                     <button type='submit'>Send</button>
+                    <ToastContainer/>
                 </div>
 
                 
