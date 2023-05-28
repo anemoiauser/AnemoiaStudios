@@ -10,7 +10,7 @@ import Tour from "./Tour";
 import Contact from "./Contact";
 import AnemoiaProjects from "./projects/AnemoiaProjects";
 import AnewoodProjects from "./projects/AnewoodProjects";
-
+import Dedication from "./Dedication";
 import AnemoiaProjectAnimationStudio1 from "./projects/AnemoiaProjectAnimationStudio1";
 import AnemoiaProjectAnimationStudio4 from "./projects/AnemoiaProjectAnimationStudio4";
 import AnemoiaProjectAnimationStudio5 from "./projects/AnemoiaProjectAnimationStudio5";
@@ -101,6 +101,7 @@ function App() {
                 <Route path="/projects/AnewoodProjectSuite" element={<AnewoodProjectSuite />} />
                 <Route path="/projects/AnewoodProjectTheatre" element={<AnewoodProjectTheatre />} />
                 <Route path="/projects/AnewoodProjectWarehouse" element={<AnewoodProjectWarehouse />} />
+                <Route path="/dedication" element={<Dedication />}/>
                 <Route path="*" element={<Error />} />
             </Routes>
 

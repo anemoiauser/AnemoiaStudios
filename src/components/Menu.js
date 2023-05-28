@@ -40,7 +40,7 @@ function Menu() {
                 <Link to='/design' className='menu-item' onClick={()=>setMenuStatus(false)}>Website Disclaimer</Link>
                 <Link to='/about' className='menu-item' onClick={()=>setMenuStatus(false)}>About Us</Link>
                 <Link to='/contact' className='menu-item' onClick={()=>setMenuStatus(false)}>Contact Us</Link>
-                <Link to='/' className='menu-item' onClick={()=>setMenuStatus(false)}>Dedication</Link>
+                <Link to='/dedication' className='menu-item' onClick={()=>setMenuStatus(false)}>Dedication</Link>
             </div>
             <div className='media-menu'>
                 <a rel="noopener noreferrer" href='https://www.youtube.com/channel/UCPAhZ9M74b5puxbLj--Kd_Q' target='_blank'><Youtube className='menu-item' /></a>
