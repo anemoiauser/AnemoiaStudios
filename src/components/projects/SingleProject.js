@@ -1,5 +1,5 @@
 import  { React, useEffect, useRef } from 'react'
-import { Link, useNavigate, useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import '../../styles/anemoia_project.css'
 import AnemoiaLogo from '../../blob/anemoia_logo.png'
 import BackButton from  '../../blob/projects/bkbut.png'
