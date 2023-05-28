@@ -9,8 +9,7 @@ import { default as all_projects } from './projects';
 
 function AnewoodProductions() {
     const { project } = useParams()
-    const projects = useRef(all_projects[project])
-
+    
     useEffect(()=>{
         document.title = 'Anemoia Studios - Projects';
     }, [])
@@ -43,8 +42,8 @@ function AnewoodProductions() {
                     Make a Contribution to Anemoia’s Campaign to Help Build Our Studio Home.<br></br><br></br>Please browse our Projects...
                 </div>
             </div>
-            {projects.current.items_names.map((e, i)=>{
-                const current_project = projects.current[e]
+            {all_projects[project].items_names.map((e, i)=>{
+                const current_project = all_projects[project][e]
                 return (
                     <div className="cell" key={`cell-${i}`}>
                         <Link to={`/projects/${project}/${e}`}>
@@ -57,8 +56,8 @@ function AnewoodProductions() {
         </Flickity>
         <Flickity className={"carousel-b"} elementType={"div"} options={testimonialFlickityOptions} disableImagesLoaded={false}>
             <div className="cell"><span><br></br><br></br>Anemoia Projects</span></div>
-            {projects.current.items_names.map((e, i)=>{
-                const current_project = projects.current[e]
+            {all_projects[project].items_names.map((e, i)=>{
+                const current_project = all_projects[project][e]
                 return (
                     <div className="cell" key={`cell-preview-${i}`}>
                         <span>{current_project.title}</span>
