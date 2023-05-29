@@ -76,7 +76,7 @@ function Contact(){
 
 
     return (
-        <section>
+        <section className='contact-section'>
             <div className='header-container' onWheel={scrollImage}>
                 <Link to='/'><img className='logo' src={AnemoiaLogo} alt='anemoia-studios-logo'/></Link>
             </div>
