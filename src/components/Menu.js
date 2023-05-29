@@ -41,6 +41,10 @@ function Menu() {
                 <Link to='/about' className='menu-item' onClick={()=>setMenuStatus(false)}>About Us</Link>
                 <Link to='/contact' className='menu-item' onClick={()=>setMenuStatus(false)}>Contact Us</Link>
                 <Link to='/dedication' className='menu-item' onClick={()=>setMenuStatus(false)}>Dedication</Link>
+                <a href='https://ifundwomen.com/projects/anemoia-studios-welcome-anewood' 
+                    className='menu-item' target='_blank' rel="noopener noreferrer">
+                    Gift Action
+                </a>
             </div>
             <div className='media-menu'>
                 <a rel="noopener noreferrer" href='https://www.youtube.com/channel/UCPAhZ9M74b5puxbLj--Kd_Q' target='_blank'><Youtube className='menu-item' /></a>
