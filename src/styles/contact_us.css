@@ -63,7 +63,7 @@ body {
   margin: 1em 0;
 }
 
-.contact-section .content-container h2, .content-container a { 
+.contact-section .content-container h2, .contact-section .content-container a { 
   font-weight: 700;
   font-size: 1.2rem;
 }
@@ -73,7 +73,7 @@ body {
   font-weight: 400;
 }
 
-.contact-section .form-container,
+.form-container,
 .contact-section .content-container {
   width: 85%;
 }
@@ -139,7 +139,7 @@ body {
     font-size: 1.6rem;
   }
 
-  .contact-section .form-container p {
+  .form-container p {
     font-size: 1.5rem;
   }
 
