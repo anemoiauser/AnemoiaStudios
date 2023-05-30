@@ -1,4 +1,4 @@
-import  React, { useEffect } from 'react'
+import  React from 'react'
 import { Link, useParams } from 'react-router-dom'
 import 'flickity-as-nav-for';
 import Flickity from "react-flickity-component";
@@ -9,10 +9,6 @@ import { default as all_projects } from './projects';
 
 function AnewoodProductions() {
     const { project } = useParams()
-
-    useEffect(()=>{
-        document.title = 'Anemoia Studios - Projects';
-    }, [])
 
     const flickityOptions = { 
         wrapAround: false,

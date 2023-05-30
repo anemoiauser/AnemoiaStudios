@@ -10,20 +10,25 @@ function Menu() {
         projects: false
     })
 
+    function switchPage(target_title) {
+        setMenuStatus(false);
+        document.title = `Anemoia Studios | ${target_title}`
+    }
+
     return (
         menuStatus ? 
         <div className='menu-main'>
             <XLg className='close' onClick={()=>setMenuStatus(false)} />
             <div className='menu-items'>
-                <Link to='/' className='menu-item' onClick={()=>setMenuStatus(false)}>Home</Link>
+                <Link to='/' className='menu-item' onClick={()=>switchPage('Home')}>Home</Link>
                 <div className='menu-item' onClick={()=>setExpandStatus({...expandStatus, tour: !expandStatus.tour})}
                 >Tours <CaretRightFill className={`expand${expandStatus.tour ? ' expand-rotated' : ''}`} />
                 {
                     expandStatus.tour ? 
                     <>
-                    <Link to='/tour/studio' className='menu-item' onClick={()=>setMenuStatus(false)}>Anemoia Studios</Link>
-                    <Link to='/tour/anewood' className='menu-item' onClick={()=>setMenuStatus(false)}>Anewood Production</Link>
-                    <Link to='/tour/outside' className='menu-item' onClick={()=>setMenuStatus(false)} replace={true}>Tour Outside</Link>
+                    <Link to='/tour/studio' className='menu-item' onClick={()=>switchPage('Tour | Anemoia Studios')}>Anemoia Studios</Link>
+                    <Link to='/tour/anewood' className='menu-item' onClick={()=>switchPage('Tour | Anewood Production')}>Anewood Production</Link>
+                    <Link to='/tour/outside' className='menu-item' onClick={()=>switchPage('Tour | Outside')} replace={true}>Tour Outside</Link>
                     </> : <></>
                 }
                 </div>
@@ -32,15 +37,15 @@ function Menu() {
                 {
                     expandStatus.projects ? 
                     <>
-                    <Link to='/projects/anemoia' className='menu-item' onClick={()=>setMenuStatus(false)}>Anemoia</Link>
-                    <Link to='/projects/anewood' className='menu-item' onClick={()=>setMenuStatus(false)}>Anewood</Link>
+                    <Link to='/projects/anemoia' className='menu-item' onClick={()=>switchPage('Projects | Anemoia')}>Anemoia</Link>
+                    <Link to='/projects/anewood' className='menu-item' onClick={()=>switchPage('Projects | Anewood')}>Anewood</Link>
                     </> : <></>
                 }
                 </div>
-                <Link to='/design' className='menu-item' onClick={()=>setMenuStatus(false)}>Website Disclaimer</Link>
-                <Link to='/about' className='menu-item' onClick={()=>setMenuStatus(false)}>About Us</Link>
-                <Link to='/contact' className='menu-item' onClick={()=>setMenuStatus(false)}>Contact Us</Link>
-                <Link to='/dedication' className='menu-item' onClick={()=>setMenuStatus(false)}>Dedication</Link>
+                <Link to='/design' className='menu-item' onClick={()=>switchPage('Disclaimer')}>Website Disclaimer</Link>
+                <Link to='/about' className='menu-item' onClick={()=>switchPage('About')}>About Us</Link>
+                <Link to='/contact' className='menu-item' onClick={()=>switchPage('Contact')}>Contact Us</Link>
+                <Link to='/dedication' className='menu-item' onClick={()=>switchPage('Dedication')}>Dedication</Link>
                 <a href='https://ifundwomen.com/projects/anemoia-studios-welcome-anewood' 
                     className='menu-item' target='_blank' rel="noopener noreferrer">
                     Gift Action

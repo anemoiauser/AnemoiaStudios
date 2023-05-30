@@ -1,4 +1,4 @@
-import  React, { useRef, useEffect } from 'react'
+import  React, { useRef } from 'react'
 import '../styles/dedication.css'
 import AnewoodLogo from '../blob/anewood_logo.png'
 
@@ -6,11 +6,6 @@ import AnewoodLogo from '../blob/anewood_logo.png'
 function Dedication() {
       
     const about_main_ref = useRef()
-    
-    useEffect(()=>{
-        document.title = 'Anemoia Studios New Web | dedication';
-    // eslint-disable-next-line
-    }, [])
 
     function scrollToHorizontal(event) {
         const amount = event.deltaY

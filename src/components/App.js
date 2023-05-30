@@ -23,13 +23,13 @@ function App() {
     const [playBGM, setPlayBGM] = useState(false)
 
     useEffect(()=>{
+        document.title = 'Anemoia Studios'
+
+        ReactGA.pageview(window.location.pathname + window.location.search);
+
         bgm.current = new Audio(AnemoiaThemeSong)
         bgm.current.loop = true
     }, [])
-    
-    useEffect(() => {
-        ReactGA.pageview(window.location.pathname + window.location.search);
-      }, []);
       
     useEffect(()=>{
         if(playBGM) bgm.current.play()

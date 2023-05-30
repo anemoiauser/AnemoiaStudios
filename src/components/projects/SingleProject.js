@@ -12,7 +12,7 @@ function SingleProject() {
     const this_project = useRef(all_projects[project][name])
 
     useEffect(()=>{
-        document.title = 'Anemoia Studios - Project';
+        document.title = document.title.split('-')[0] + ` - ${name}`;
     // eslint-disable-next-line
     }, [])
 

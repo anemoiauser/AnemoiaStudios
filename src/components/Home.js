@@ -6,10 +6,9 @@ import { PauseFill, PlayFill } from 'react-bootstrap-icons';
 function Home({playBGM, setPlayBGM}) {
 
     const [musicPanelExpanded, setMusicPanelExpandStatus] = useState(false)
-    
+
     useEffect(()=>{
-        document.title = 'Anemoia Studios New Web';
-    // eslint-disable-next-line
+        document.title = 'Anemoia Studios | Home'
     }, [])
 
     return (

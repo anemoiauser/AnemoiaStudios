@@ -1,4 +1,4 @@
-import { React, useState, useEffect, useRef } from 'react';
+import { React, useState, useRef } from 'react';
 import '../styles/contact_us.css'
 import AnemoiaLogo from '../blob/anemoia_logo.png'
 import { Link, useNavigate } from 'react-router-dom';
@@ -7,11 +7,6 @@ import { ToastContainer, toast } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
 
 function Contact(){
-
-    useEffect(() => {
-        document.title = "Anemoia Studios | Contact Us";
-        // eslint-disable-next-line
-    }, [])
 
     const [scrollLeft, setScrollLeft] = useState(0)
 

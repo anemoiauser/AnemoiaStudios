@@ -1,15 +1,10 @@
-import  React, { useRef, useEffect } from 'react'
+import  React, { useRef } from 'react'
 import '../styles/design.css'
 import AnewoodLogo from '../blob/anewood_logo.png'
 
 function Design() {
       
     const design_ref = useRef()
-    
-    useEffect(()=>{
-        document.title = 'Anemoia Studios New Web | Website Disclaimer';
-    // eslint-disable-next-line
-    }, [])
 
     function scrollToHorizontal(event) {
         const amount = event.deltaY
