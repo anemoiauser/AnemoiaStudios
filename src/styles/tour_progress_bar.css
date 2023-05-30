@@ -1,11 +1,19 @@
-.tour-progress-bar-main {
+.tour-progress-bar-container {
     position: fixed;
     z-index: 5;
     display: block;
+    width: 100vw;
+    height: fit-content;
+    left: 0;
+    bottom: 50px;
+}
+.tour-progress-bar-main {
+    display: block;
+    position: relative;
     width: fit-content;
     height: fit-content;
-    bottom: 50px;
     padding: 8px;
+    margin: auto;
 }
 
 .tour-progress-bar-main .diamond-outer {

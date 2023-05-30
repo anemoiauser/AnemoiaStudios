@@ -13,7 +13,6 @@ import { project_titles } from '../settings';
 function Tour({scene, frames}) {
     const containerRef = useRef()
     const sceneRef = useRef()
-    const progressBarRef = useRef()
 
     const scenes = useRef({
         anewood: Anewood,
@@ -35,7 +34,6 @@ function Tour({scene, frames}) {
     const frameWidth = useRef(0)
     const maxTranslateX = useRef(0)
     const [translateX, setTranslateX] = useState(0)
-    const [progressBarLeft, setProgressBarLeft] = useState(0)
     const [progress, setProgress] = useState([...Array(frames)].map(()=>{return 0}))
     const [lastProgress, setLastProgress] = useState(0)
 
@@ -79,9 +77,6 @@ function Tour({scene, frames}) {
         maxTranslateX.current = 
             sceneRef.current.offsetWidth - containerRef.current.offsetWidth
         setTranslateX(realTranslateX(maxTranslateX.current / 2))
-
-        // progress bar
-        setProgressBarLeft((containerRef.current.offsetWidth - progressBarRef.current.offsetWidth) / 2)
     }
 
     function scrollImage(event) {
@@ -115,8 +110,7 @@ function Tour({scene, frames}) {
                 onMouseLeave={()=>setMouseDown(false)} 
                 onTouchStart={touchStart} onTouchEnd={()=>setMouseDown(false)} onTouchMove={e=>onMouseMove(e, true)}>
             <TourProjectTitles {...sceneTitles[lastProgress]} />
-            <TourProgressBar progress={progress} manualSetProgress={manualSetProgress}
-                progressBarRef={progressBarRef} left={progressBarLeft} />
+            <TourProgressBar progress={progress} manualSetProgress={manualSetProgress} />
             <Link to='/'><img className='logo'  src={logos.current[scene]} alt='logo' /></Link>
             <img className='scene' ref={sceneRef} src={scenes.current[scene]} alt="scene" 
                 onLoad={updateWidthInfo} draggable={false} />
