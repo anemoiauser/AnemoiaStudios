@@ -1,9 +1,11 @@
-import  React, { useEffect } from 'react'
+import  React, { useEffect, useState } from 'react'
 import '../styles/home.css'
 import AnemoiaLogo from '../blob/anemoia_logo.png'
 import { PauseFill, PlayFill } from 'react-bootstrap-icons';
 
 function Home({playBGM, setPlayBGM}) {
+
+    const [musicPanelExpanded, setMusicPanelExpandStatus] = useState(false)
     
     useEffect(()=>{
         document.title = 'Anemoia Studios New Web';
@@ -17,7 +19,8 @@ function Home({playBGM, setPlayBGM}) {
                 <span className='title'>Anemoia Studios</span>
                 <span className='sub'>"We are the ones, We've been waiting for."</span>
             </div>
-            <div className='music-panel' onClick={()=>setPlayBGM(!playBGM)}>
+            <div className={`music-panel${musicPanelExpanded ? ' music-panel-expanded':''}`} 
+                onClick={()=>{setPlayBGM(!playBGM); setMusicPanelExpandStatus(!musicPanelExpanded)}}>
                 <span>Enjoy our theme song here!</span>
                 {
                     playBGM ? 

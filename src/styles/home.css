@@ -68,7 +68,10 @@
     margin-left: 10px;
     margin-bottom: -10px;
 }
-.home .music-panel:hover {
-    cursor: pointer;
-    transform: unset;
+.home .music-panel:hover { cursor: pointer; }
+
+.home .music-panel:hover,
+.home .music-panel-expanded { transform: unset; }
+@media screen and (max-width: 1100px) {
+    .home .music-panel:hover { transform: translateX(calc(-100% + 50px)); }
 }
