@@ -90,13 +90,13 @@ function Contact(){
             <div className='form-container'>
                 <form method='get' ref={form} id='contact' onSubmit={handleSubmit}>
                 <div className='input-container'>
-                    <label for="fullName">Name:<br/>
+                    <label htmlFor="fullName">Name:<br/>
                     <input type='text' name="fullName" placeholder="Name" value={name} onChange={handleName}/></label>
-                    <label for="email">Email Address:<br/>
+                    <label htmlFor="email">Email Address:<br/>
                     <input type='email' name="email" placeholder="Email" value={email} onChange={handleEmail}/></label>
-                    <label for="subject">Subject:<br/>  
+                    <label htmlFor="subject">Subject:<br/>  
                     <input type='text' name="subject" placeholder="Subject" value={subject} onChange={handleSubject}/></label>
-                    <label for="message">Message:<br/>
+                    <label htmlFor="message">Message:<br/>
                     <textarea name="message" rows="5" cols="22" placeholder='Write your message...' value={message} onChange={handleMessage}/></label>
                     <button type='submit'>Send</button>
                     <ToastContainer/>
