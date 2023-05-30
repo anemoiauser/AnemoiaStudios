@@ -25,6 +25,8 @@ function Tour({scene, frames}) {
 
     useEffect(()=>{
         setSceneTitles(project_titles[scene])
+        scenes.current = tour_scenes[scene]
+        logos.current = project_logos[scene]
         setProgress([...Array(frames)].map(()=>{return 0}))
         setLastProgress(undefined)
         updateWidthInfo()
@@ -97,8 +99,8 @@ function Tour({scene, frames}) {
                 onTouchStart={touchStart} onTouchEnd={()=>setMouseDown(false)} onTouchMove={e=>onMouseMove(e, true)}>
             <TourProjectTitles {...sceneTitles[lastProgress]} />
             <TourProgressBar progress={progress} manualSetProgress={manualSetProgress} />
-            <Link to='/'><img className='logo'  src={logos.current[scene]} alt='logo' /></Link>
-            <img className='scene' ref={sceneRef} src={scenes.current[scene]} alt="scene" 
+            <Link to='/'><img className='logo'  src={logos.current} alt='logo' /></Link>
+            <img className='scene' ref={sceneRef} src={scenes.current} alt="scene" 
                 onLoad={updateWidthInfo} draggable={false} />
         </div>
     )
