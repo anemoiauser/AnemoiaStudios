@@ -1,3 +1,23 @@
+// Tour
+import Anewood from './blob/anewood.jpg'
+import Studio from './blob/studio.jpg'
+import Outside from './blob/front.jpg'
+import AnewoodLogo from './blob/anewood_logo.png'
+import AnemoiaLogo from './blob/anemoia_logo.png'
+
+export const tour_scenes = {
+    anewood: Anewood,
+    studio: Studio,
+    outside: Outside
+}
+
+export const project_logos = {
+    anewood: AnewoodLogo,
+    studio: AnemoiaLogo,
+    outside: AnemoiaLogo
+}
+
+// TourProjectTitles
 export const project_titles = {
     studio: [
         {name: 'Writers Studio', link: '/projects/anemoia/WritersStudio'},

@@ -1,32 +1,18 @@
 import  React,{ useEffect, useRef, useState } from 'react'
-import Anewood from '../blob/anewood.jpg'
-import Studio from '../blob/studio.jpg'
-import Outside from '../blob/front.jpg'
-import AnewoodLogo from '../blob/anewood_logo.png'
-import AnemoiaLogo from '../blob/anemoia_logo.png'
 import '../styles/tour.css'
 import { Link } from 'react-router-dom'
 import TourProgressBar from './TourProgressBar'
 import TourProjectTitles from './TourProjectTitles'
-import { project_titles } from '../settings';
+import { tour_scenes, project_logos, project_titles } from '../settings';
 
 function Tour({scene, frames}) {
     const containerRef = useRef()
     const sceneRef = useRef()
 
-    const scenes = useRef({
-        anewood: Anewood,
-        studio: Studio,
-        outside: Outside
-    })
-    const logos = useRef({
-        anewood: AnewoodLogo,
-        studio: AnemoiaLogo,
-        outside: AnemoiaLogo
-    })
+    const scenes = useRef(tour_scenes[scene])
+    const logos = useRef(project_logos[scene])
 
-    const [sceneTitles, setSceneTitles] = useState(
-        project_titles[scene])
+    const [sceneTitles, setSceneTitles] = useState(project_titles[scene])
 
     const [mouseDown, setMouseDown] = useState(false)
     const [mouseX, setMouseX] = useState()
