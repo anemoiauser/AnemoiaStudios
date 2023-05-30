@@ -17,11 +17,12 @@ function Tour({scene, frames}) {
     const [mouseDown, setMouseDown] = useState(false)
     const [mouseX, setMouseX] = useState()
 
-    const frameWidth = useRef(0)
-    const maxTranslateX = useRef(0)
     const [translateX, setTranslateX] = useState(0)
     const [progress, setProgress] = useState([...Array(frames)].map(()=>{return 0}))
     const [lastProgress, setLastProgress] = useState(0)
+
+    const [sceneReloadTrigger, triggerSceneReload] = useState(true)
+    const [sceneFirstLoad, setSceneFirstLoad] = useState(true)
 
     useEffect(()=>{
         setSceneTitles(project_titles[scene])
@@ -29,7 +30,7 @@ function Tour({scene, frames}) {
         logos.current = project_logos[scene]
         setProgress([...Array(frames)].map(()=>{return 0}))
         setLastProgress(undefined)
-        updateWidthInfo()
+        triggerSceneReload(!sceneReloadTrigger)
     // eslint-disable-next-line
     }, [scene, frames])
 
@@ -37,9 +38,10 @@ function Tour({scene, frames}) {
         sceneRef.current.style.transform = `translateX(-${translateX}px)`
 
         // set progress bar diamond
-        if(frameWidth.current) {
-            const progress_index = Math.min((translateX === maxTranslateX.current ?
-                progress.length - 1 : Math.round(translateX / frameWidth.current)),
+        const {frameWidth, maxTranslateX} = getWidthInfo()
+        if(frameWidth) {
+            const progress_index = Math.min((translateX === maxTranslateX ?
+                progress.length - 1 : Math.round(translateX / frameWidth)),
                 progress.length - 1)
             if(progress_index !== lastProgress) {
                 let progress_arr = [...progress]
@@ -48,23 +50,35 @@ function Tour({scene, frames}) {
                 setProgress(progress_arr)
                 setLastProgress(progress_index)
             }
+
+            if(sceneFirstLoad) {
+                sceneRef.current.style.transitionDuration = '3s'
+                setSceneFirstLoad(false)
+            }
         }
     // eslint-disable-next-line
     }, [translateX])
 
+    function getWidthInfo() {
+        return {
+            frameWidth: sceneRef.current.offsetWidth / frames,
+            maxTranslateX: sceneRef.current.offsetWidth - containerRef.current.offsetWidth,
+            containerWidth: containerRef.current.offsetWidth
+        }
+    }
+
     function realTranslateX(value) {
         let real = value
+        const {maxTranslateX} = getWidthInfo()
         if(value < 0) real = 0
-        else if(value > maxTranslateX.current) real = maxTranslateX.current
+        else if(value > maxTranslateX) real = maxTranslateX
         return real
     }
 
-    function updateWidthInfo() {
-        // scene
-        frameWidth.current = sceneRef.current.offsetWidth / frames
-        maxTranslateX.current = 
-            sceneRef.current.offsetWidth - containerRef.current.offsetWidth
-        setTranslateX(realTranslateX(maxTranslateX.current / 2))
+    function sceneOnload() {
+        setSceneFirstLoad(true)
+        const {maxTranslateX} = getWidthInfo()
+        setTranslateX(realTranslateX(maxTranslateX / 2))
     }
 
     function scrollImage(event) {
@@ -80,9 +94,9 @@ function Tour({scene, frames}) {
     }
 
     function manualSetProgress(p) {
-        const container_width = containerRef.current.offsetWidth
-        let left = p * frameWidth.current
-        left += (frameWidth.current - container_width) / 2
+        const {containerWidth, frameWidth} = getWidthInfo()
+        let left = p * frameWidth
+        left += (frameWidth - containerWidth) / 2
         setTranslateX(realTranslateX(left))
     }
 
@@ -101,7 +115,7 @@ function Tour({scene, frames}) {
             <TourProgressBar progress={progress} manualSetProgress={manualSetProgress} />
             <Link to='/'><img className='logo'  src={logos.current} alt='logo' /></Link>
             <img className='scene' ref={sceneRef} src={scenes.current} alt="scene" 
-                onLoad={updateWidthInfo} draggable={false} />
+                onLoad={sceneOnload} draggable={false} key={`scene-img-${sceneReloadTrigger}`}/>
         </div>
     )
 }
