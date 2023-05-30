@@ -21,6 +21,7 @@
 .menu-main {
     width: 25vw;
     height: 100vh;
+    height: -webkit-fill-available;
     position: fixed;
     z-index: 11;
     display: block;

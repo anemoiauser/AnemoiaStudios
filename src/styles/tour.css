@@ -6,6 +6,7 @@
     left: 0;
     display: block;
     overflow: hidden;
+    height: -webkit-fill-available;
 }
 .container::-webkit-scrollbar {display: none;}
 
