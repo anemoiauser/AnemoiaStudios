@@ -1,5 +1,6 @@
 {
-  "name": "anemoia-new-web",
+  "name": "anemoia-studios",
+  "homepage": "https://anemoiastudios.com/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
