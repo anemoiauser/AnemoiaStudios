@@ -48,7 +48,7 @@ body {
   border: none;
   border-bottom: 1px solid #516b7b;
   padding: 1em 2em;
-  width: -webkit-fill-available;
+  width: 100%;
 }
 
 .contact-section input::placeholder,
