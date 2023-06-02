@@ -22,10 +22,10 @@
 .home .logo {
     position: absolute;
     display: block;
-    width: 25vw;
-    height: 20vw;
+    width: 20vw;
+    height: 17vw;
     top: 30vh;
-    left: 5vw;
+    left: 10vw;
 }
 
 .home .slogan {
@@ -43,6 +43,7 @@
 }
 .home .slogan .sub {
     margin-left: 10px;
+    color: black;
 }
 
 .home .music-panel {
