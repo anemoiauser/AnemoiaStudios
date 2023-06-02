@@ -1,10 +1,10 @@
 import  React  from 'react'
 import '../styles/tour_progress_bar.css'
 
-function TourProgressBar({progress, manualSetProgress, progressBarRef, left}) {
+function TourProgressBar({progress, manualSetProgress, progressBarRef}) {
     return (
         <div className='tour-progress-bar-container' draggable={false}>
-            <div className='tour-progress-bar-main'
+            <div className='tour-progress-bar-main' draggable={false}
                 ref={progressBarRef}>
                 {/* loop for n times to generate progress bar */}
                 {[...Array(progress.length)].map((_, i)=>{
