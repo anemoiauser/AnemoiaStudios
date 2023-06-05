@@ -1,6 +1,6 @@
 import  React,{ useState } from 'react'
 import '../styles/menu.css'
-import { CaretRightFill, Instagram, Linkedin, List, Twitter, XLg, Youtube } from 'react-bootstrap-icons'
+import { CaretRightFill, Instagram, Linkedin, List, Tiktok, Twitter, XLg, Youtube } from 'react-bootstrap-icons'
 import { Link } from 'react-router-dom'
 
 function Menu() {
@@ -50,12 +50,17 @@ function Menu() {
                     className='menu-item' target='_blank' rel="noopener noreferrer">
                     Gift Action
                 </a>
+                <a href='https://www.kiva.org/lend/2577882' 
+                    className='menu-item' target='_blank' rel="noopener noreferrer">
+                    KIVA
+                </a>
             </div>
             <div className='media-menu'>
                 <a rel="noopener noreferrer" href='https://www.youtube.com/channel/UCPAhZ9M74b5puxbLj--Kd_Q' target='_blank'><Youtube className='menu-item' /></a>
                 <a rel="noopener noreferrer" href='https://instagram.com/anemoiastudios' target='_blank'><Instagram className='menu-item' /></a>
                 <a rel="noopener noreferrer" href='https://twitter.com/anemoiainc' target='_blank'><Twitter className='menu-item' /></a>
                 <a rel="noopener noreferrer" href='https://www.linkedin.com/company/anemoia-studios-inc' target='_blank'><Linkedin className='menu-item' /></a>
+                <a rel="noopener noreferrer" href='https://www.tiktok.com/@anemoiastudios' target='_blank'><Tiktok className='menu-item' /></a>
             </div>
         </div> :
         <div className='hamburger-btn' onClick={()=>{setMenuStatus(true)}}>
