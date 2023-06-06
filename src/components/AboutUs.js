@@ -39,9 +39,6 @@ function AboutUs() {
                 </span>
                 <img className='affiliation' src={FemaleFounderLogo} alt='Female Founder Logo' />
                 <img className='affiliation' src={NewMediaFilmFestival} alt='New Media Film Festival' />
-<<<<<<< Updated upstream
-            </div>
-=======
                 <img className='affiliation' src={HonorableMentionTheMacoprojectFilmFestival2021} alt='The Macoproject Film Festival 2021' />
                 <img className='affiliation' src={OfficalSelectionTheMacoprojectFilmFestival2021} alt='The Macoproject Film Festival 2021' />
                 <img className='affiliation' src={HonorableMentionDiamondEye} alt='Diamond Eye' />
@@ -49,7 +46,6 @@ function AboutUs() {
                 <img className='affiliation' src={WinnerDiamondEye} alt='Diamond Eye' />
                 <img className='affiliation' src={Emergingscreenwriters} alt='Emergingscreenwriters' />
             </div> 
->>>>>>> Stashed changes
             <div className='people-container'>
             <div className='about-block people'>
                 <img className='photo' src={CEOPhoto} alt='CEO' />
