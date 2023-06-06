@@ -13,7 +13,7 @@ import AnemoiaThemeSong from '../blob/Anemoia Theme Song Instrumentals.wav'
 import AnewoodProductions from "./projects/AnewoodProductions";
 import SingleProject from "./projects/SingleProject";
 
-const TRACKING_ID = ""; // TRACKING_ID
+const TRACKING_ID = "G-FH6WQS6S6Y"; // TRACKING_ID
 
 ReactGA.initialize(TRACKING_ID);
 
