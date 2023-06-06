@@ -1,0 +1,108 @@
+body {
+    background-color: rgb(128, 215, 207);
+}
+
+.design-main {
+    display: block;
+    white-space: nowrap;
+    height: 90vh;
+    width: 85vw;
+    overflow-y: auto;
+    position: absolute;
+    top: 3vh;
+    left: 3vw;
+}
+.design-main::-webkit-scrollbar {height: 8px;}
+.design-main::-webkit-scrollbar-track {background: rgba(0, 0, 0, 0);}
+.design-main::-webkit-scrollbar-thumb {background: rgb(180, 180, 180); border-radius: 5px;}
+.design-main::-webkit-scrollbar-thumb:hover {background: rgb(150, 150, 150);}
+
+.design-main .design-block {
+    width: 70%;
+    margin-top: 1vh;
+    margin-left: 1vh;
+    overflow: visible;
+    display: inline-block;
+    transition-duration: .3s;
+    vertical-align: top;
+    overflow-y: auto;
+    word-wrap: normal;
+    white-space: normal;
+    
+}
+.design-main .design-block2 {
+    width: 25%;
+    margin-top: 1vh;
+    margin-left: 1vh;
+    overflow: visible;
+    display: inline-block;
+    transition-duration: .3s;
+    vertical-align: top;
+    overflow-y: auto;
+    word-wrap: normal;
+    white-space: normal;
+    
+}
+.design-main .main-img {
+    width: 15vh;
+    height: 9vh;
+    position: sticky;
+    padding-left: 0vh;
+    padding-top: 0vh;
+}
+
+.design-main .tagline {
+    
+    display: inline-block;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.design-main .p{
+    font-weight: normal;
+    word-spacing: 5px;
+    font-size: 20px;
+}
+.design-main .p2{
+    text-decoration: underline;
+    word-spacing: 3px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.design-main .p3{
+    font-weight: normal;
+    font-size: 18px;
+
+}
+.design-main .p4{
+    display: block;
+}
+
+.design-main a{
+    -webkit-text-fill-color: aliceblue;
+}
+
+@media only screen and (max-width: 1024px) {
+    .design-main .design-block {display:block;
+    }
+    .design-main .p4{
+        display: inline-block;
+    }
+    .design-main .design-block {
+        width: 90%;
+        display: block;
+    }.design-main .design-block2 {
+        width: 90%;
+        
+    }
+    .design-block2 .p4{
+        display: block;
+    }
+} 
+
+@media only screen and (min-width: 1024px) {
+   
+  
+} 
+
+

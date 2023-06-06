@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;700&display=swap');
+
+* {
+    font-family: 'Instrument Sans', sans-serif;
+}
+
 .home {
     background-image: url('/src/blob/compressed_HomePageBackground.webp');
     background-position: bottom;
@@ -6,6 +12,7 @@
     display: block;
     width: 100vw;
     height: 100vh;
+    height: -webkit-fill-available;
     position: fixed;
     left: 0;
     top: 0;
@@ -15,10 +22,10 @@
 .home .logo {
     position: absolute;
     display: block;
-    width: 25vw;
-    height: 20vw;
+    width: 20vw;
+    height: 17vw;
     top: 30vh;
-    left: 5vw;
+    left: 10vw;
 }
 
 .home .slogan {
@@ -36,4 +43,37 @@
 }
 .home .slogan .sub {
     margin-left: 10px;
+    color: black;
+}
+
+.home .music-panel {
+    position: absolute;
+    display: block;
+    left: 0;
+    bottom: 0;
+    background-color: rgb(80, 178, 179);
+    border-top-right-radius: 15px;
+    padding: 10px;
+    transform: translateX(calc(-100% + 50px));
+    transition-duration: .5s;
+}
+.home .music-panel span {
+    width: fit-content;
+    height: 30px;
+    line-height: 30px;
+    display: inline-block;
+}
+.home .play-music-icon {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    margin-bottom: -10px;
+}
+.home .music-panel:hover { cursor: pointer; }
+
+.home .music-panel:hover,
+.home .music-panel-expanded { transform: unset; }
+@media screen and (max-width: 1100px) {
+    .home .music-panel:hover { transform: translateX(calc(-100% + 50px)); }
 }

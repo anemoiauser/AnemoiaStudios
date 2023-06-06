@@ -1,29 +1,30 @@
 .container {
     width: 100vw;
     height: 100vh;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     display: block;
-    overflow-y: hidden;
-    overflow-x: auto;
+    overflow: hidden;
+    height: -webkit-fill-available;
 }
 .container::-webkit-scrollbar {display: none;}
 
-.container .scence {
+.container .scene {
     display: block;
     position: absolute;
-    /* height: 100%; */
-    width: calc(100vw * 9);
+    height: 100%;
     top: 0;
+    transform-origin: left;
+    transform: translateX(0px);
 }
 
-.container .scence:hover {cursor: grab;}
-.container .scence:active {cursor: grabbing;}
+.container .scene:hover {cursor: grab;}
+.container .scene:active {cursor: grabbing;}
 
 .container .logo {
     width: 20vh;
-    height: 15vh;
+    height: 17vh;
     position: fixed;
     top: 30px;
     left: 30px;
@@ -31,3 +32,10 @@
 }
 
 .container .logo:hover {cursor: pointer;}
+
+@media screen and (max-width: 1100px) {
+    .container .logo {
+        top: 10px;
+        left: 10px;
+    }
+}

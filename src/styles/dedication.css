@@ -67,7 +67,6 @@ body {
    
 }
 
-
 .team-container {
     display: block;
     border-left: 1px solid white;
@@ -98,8 +97,8 @@ padding-top: 1vh;
     height: 70%;
     width: 30%;
     display: inline-block;
-    text-align: flex;
-    align-items: flex-start;
+    text-align: center;
+    
 }
 
 

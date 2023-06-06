@@ -21,6 +21,7 @@
 .menu-main {
     width: 25vw;
     height: 100vh;
+    height: -webkit-fill-available;
     position: fixed;
     z-index: 11;
     display: block;
@@ -36,6 +37,10 @@
     width: 30px;
     height: 30px;
 }
+.menu-main .menu-items::-webkit-scrollbar {width: 7px;}
+.menu-main .menu-items::-webkit-scrollbar-track {opacity: 0;}
+.menu-main .menu-items::-webkit-scrollbar-thumb {border-radius: 5px; background-color: rgb(200, 200, 200);}
+.menu-main .menu-items::-webkit-scrollbar-thumb:hover {background-color: rgb(170, 170, 170);}
 .menu-main .close:hover {cursor: pointer;}
 
 .menu-main .menu-items {
@@ -82,10 +87,34 @@
 }
 
 .menu-main .media-menu .menu-item {
-    width: 3vw;
-    height: 3vw;
+    position: relative;
+    width: 2.3vw;
+    height: 2.3vw;
     margin: 0 1vw;
     display: inline-block;
     color: white;
     margin-bottom: 15px;
+}
+
+/* for mobile view */
+@media screen and (max-width: 1100px) {
+    .menu-main {
+        width: 100%;
+    }
+    .menu-main .menu-items .menu-item {
+        font-size: 5vh;
+        margin-left: 5vw;
+    }
+    .menu-main .menu-items .expand {
+        font-size: 2vh;
+    }
+    .menu-main .menu-items .menu-item .menu-item {
+        margin-left: 6vw;
+        font-size: 4vh;
+    }
+    .menu-main .media-menu .menu-item {
+        width: 10vw;
+        height: 10vw;
+        margin: 0 4.5vw;
+    }
 }

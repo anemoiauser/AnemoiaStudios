@@ -1,0 +1,63 @@
+.tour-progress-bar-container {
+    position: fixed;
+    z-index: 5;
+    display: block;
+    width: 100%;
+    height: fit-content;
+    left: 0;
+    bottom: 50px;
+}
+.tour-progress-bar-container:hover { cursor: grab;}
+.tour-progress-bar-container:active { cursor: grabbing;}
+.tour-progress-bar-main {
+    display: block;
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    padding: 8px;
+    margin: auto;
+}
+
+.tour-progress-bar-main .diamond-outer {
+    background-color: lightgray;
+    transform: translateY(14.63px) rotate(45deg);
+    width: 35.36px;
+    height: 35.36px;
+    display: inline-block;
+}
+.tour-progress-bar-main .diamond-outer:hover {cursor: pointer;}
+
+.tour-progress-bar-main .diamond-inner {
+    background-color: rgb(37,122,136);
+    border: 2px solid rgb(153,215,207);
+    display: block;
+    transform: translate(9px, 9px);
+    width: 15px;
+    height: 15px;
+    transition-duration: .5s;
+    opacity: 0;
+}
+
+.tour-progress-bar-main .connector {
+    background-color: lightgray;
+    width: 50px;
+    height: 5px;
+    display: inline-block;
+}
+
+@media screen and (max-width: 1100px) {
+    .tour-progress-bar-main .diamond-outer {
+        width: 20px;
+        height: 20px;
+        transform: translateY(9px) rotate(45deg);
+    }
+    .tour-progress-bar-main .connector {
+        width: 15px;
+        height: 3px;
+    }
+    .tour-progress-bar-main .diamond-inner {
+        transform: translate(5px, 5px);
+        width: 8px;
+        height: 8px;
+    }
+}
