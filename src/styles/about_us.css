@@ -109,20 +109,20 @@ body {
     .about-main .people-container {
         display: block;
         height: 60%;
-        width: 50%;
+        width: fit-content;
     }
     
     .about-main .people span {
         display: block;
+        max-width: 38.5vw;
     }
-  
 } 
 
 
 
 
 .about-main .people .photo {
-    width: 10vw;
+    width: 12vh;
 }
 
 
