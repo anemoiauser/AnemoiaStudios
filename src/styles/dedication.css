@@ -153,8 +153,9 @@ padding-top: 1vh;
 
 
 .intern-container  .photo {
-
-    align-items: center;
+    width: 80%;
+    
+    align-content: center ;
 }
 
 

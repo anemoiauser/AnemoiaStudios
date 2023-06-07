@@ -72,7 +72,8 @@ function Dedication() {
             <br />I'm proud of the results I achieved and how my work positively affected the company. This experience has motivated me to continue using technology to make a difference in the software development field.</span>
             </div>
             </div>
-            <div style= {{width: "30%"}} className='intern-container intern'>
+            <div className= 'intern-container'>
+            <div style= {{width: "25%"}} className='intern-container intern'>
             <img className='intern-container photo' src = {SarthakVats} alt='Sarthak Vats' />
             <h3>Sarthak Vats</h3>
             <span><b>Software Engineer</b><br/>
@@ -80,7 +81,7 @@ function Dedication() {
             <br />During my time at Anemoia Studios, I ran point and collaborated closely with the android team to develop an iOS app that provided a secure platform known as “Mind Ya Wellness” for clients to connect with therapists.
             </span>
             </div>
-
+            </div>
             </div>
 
             
