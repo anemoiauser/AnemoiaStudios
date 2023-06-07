@@ -101,15 +101,17 @@ body {
     .about-main .people {
         height: 100%;
         display: inline-block;
-        width: fit-content;
+        width: 50%;
         border-left: 1px solid black;
         border-right: 1px solid black;
         text-align: center;
+        box-sizing: border-box;
     }
+    .about-main .people:nth-child(even) {border-left: unset;}
     .about-main .people-container {
         display: block;
         height: 60%;
-        width: fit-content;
+        width: 100%;
     }
     
     .about-main .people span {
